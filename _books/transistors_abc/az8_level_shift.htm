@@ -1,0 +1,179 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>8.Схема сдвига уровня.</title>
+</head><body alink="#ff0000" bgcolor="#ffffff" text="#0000ff" vlink="#000080" link="#0000ff">
+<font color="#000000" face="Arial">
+<center>
+
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td align="center"><p align="center"><font color="#0000ff" size="6"><b>8.Схема сдвига уровня.</b></font></p>
+</td>
+</tr>
+</tbody></table>
+
+
+<p align="left">В
+многокаскадных усилителях, не
+имеющих гальванической связи между
+каскадами и охваченных общей
+отрицательной обратной связью,
+возникает опасность
+самовозбуждения на инфранизкой
+частоте. Как известно, каждый
+переходной, а также блокирующий
+конденсатор вносит максимальный
+сдвиг по фазе на низких частотах до
+90°. При наличии трёх и более таких
+фазовращателей возникает
+опасность самовозбуждения.<br>
+Самовозбуждение не возникает, пока
+коэффициент усиления при сдвиге
+фазы 180° меньше единицы (сплошная
+линия), и сразу же наступает как
+только коэффициент усиления
+становится равным или чуть больше 1
+(пунктирная линия):</p>
+<p align="center"><img src="az8_level_shift_files/vt177.gif" width="200" height="200"></p>
+<p align="left">Помимо фазовых
+искажений, многие типы
+конденсаторов вносят существенные
+(до1%) нелинейные искажения, а
+установленные на входе
+высокочувствительных усилителей,
+ещё и шумы. Отсюда понятно,
+насколько важно по возможности
+обходиться без них.<br>
+Особое место среди усилителей
+занимают усилители постоянного
+тока, кожффициент усиления которых
+не изменяется при уменьшении
+частоты до нулевого значения.
+Однако при непосредственной связи
+между каскадами, особенно на
+транзисторах одной проводимости,
+приходится согласовывать
+сравнительно большой (по модулю)
+потенциал на выходе предыдущего
+каскада с малым потенциалом на
+входе последующего. Среди методов
+согласования каскадов можно
+выделить четыре наиболее
+распространённых:</p>
+
+<p align="center"><font color="#0000ff"><b>1. С дополнительным источником напряжения в цепи связи.</b></font></p>
+<p align="center"><img src="az8_level_shift_files/vt178.gif" width="175" height="185"></p>
+
+<p align="center"><font color="#0000ff"><b>2. С диодом Зенера (стабилитроном) в цепи связи.</b></font></p>
+<p align="center"><img src="az8_level_shift_files/vt179.gif" width="174" height="193"></p>
+
+<p align="center"><font color="#0000ff"><b>3. С делителем напряжения и дополнительным источником.</b></font></p>
+<p align="left">Применение
+делителя с дополнительным
+источником требует частотной
+коррекции из-за опасности
+ограничения полосы пропускания
+сверху, т.к. возникает
+интегрирующая RC - цепь. Условие
+компенсации выглядит следующим
+образом: R2Cк=R3Cвх, откуда Ск=R3Свх/R2.
+Очевидно, что такой способ
+коррекции несовершенен, т.к.
+требует точной настройки и
+применения каскада, свободного от
+эффекта Миллера.</p>
+<p align="center"><img src="az8_level_shift_files/vt180.gif" width="206" height="200"></p>
+<p align="center">Более совершенный каскад.</p>
+<p align="left">Здесь резисторы
+R1-R4 образуют своеобразный мост, в
+диагональ которого включён
+конденсатор С. При этом необходимо
+выполнение условия: R1/R2=R4/R3. При этом
+ёмкость конденсатора подбирать нет
+необходимости, достаточно, чтобы
+она была несколько больше входной
+ёмкости. Обычно её выбирают в
+пределах 220....470 пФ.</p>
+
+<p align="center"><img src="az8_level_shift_files/vt181.gif" width="174" height="239"></p>
+
+<p align="center"><font color="#0000ff"><b>4. Со схемой сдвига уровня.</b></font></p>
+<p align="center">Простейшая схема сдвига уровня с помощью резистивного делителя:</p>
+<p align="center"><img src="az8_level_shift_files/vt182.gif" width="99" height="223"></p>
+<p align="left">Напряжение сдвига уровня пропорционально резисторам R1,
+R2. При этом неизбежно происходит потеря коэффициента передачи.
+применение генератора тока вместо резистора R2 позволяет устранить этот
+недостаток:</p>
+<p align="center"><img src="az8_level_shift_files/vt183.gif" width="102" height="228"></p>
+<p align="left">При этом смещение по постоянному току зависит как от номинала резистора, так и от тока ГСТ и равно I*R1. При
+необходимостиподстройки напряжения смещения резистор R1 выбирают подстроичным или делают регулируемым ГСТ.</p>
+<p align="center">Схема сдвига уровня с коэффицментом передачи больше единицы.</p>
+<p align="left">Благодаря положительной обратной связи с делителем на
+резисторах R2, R3 превращает генератор тока на VT2, R3 в активный
+источник тока (АИТ).</p>
+<p align="center"><img src="az8_level_shift_files/vt184.gif" width="154" height="239"></p>
+<p align="left">Относительно простую схему сдвига уровня сигнала без изменения его фазы можно получить с помощью каскада с общей базой:</p>
+<p align="center"><img src="az8_level_shift_files/vt185.gif" width="127" height="290"></p>
+<p align="left">Применение транзистора VT3 повышает точность передачи сигнала, т.к. компенсирует изменения напряжения
+базоэмиттерного перехода транзистора VT2. Вообще, строго говоря, таких транзисторов необходимо устанавливать два и
+последовательно - для компенсации изменения напряжения переходов транзисторов VT1, VT2.</p>
+<p align="left">В заключении раздела предлагается схема высококачественного усилителя мощности, разработанного на основании вышеизложенного:</p>
+<p align="center"><img src="az8_level_shift_files/vt186.gif" width="640" height="710"></p>
+<p align="left">Коэффициент
+усиления с разомкнутой петлёй ООС
+увеличен примерно на 10 дБ. Цепочка R13,
+C9, R14, C10 служит для устранения
+перекомпенсации входной ёмкости. В
+качестве источника смещения
+выходного каскада применён
+встречно - параллельный генератор
+опорного напряжения. С целью
+улучшения отслеживания средней
+точки введён резистор R3. Питание
+усилителя - от источника с
+незаземлённой средней точкой, что
+избавляет от необходимости защиты
+громкоговорителей по постоянному
+току. Налаживание усилителя
+сводится к установке тока покоя
+выходных транзисторов порядка 50...70
+мА подбором резистора R17 и
+установке половины напряжения
+питания на выходе усилителя
+подбором резистора R5 (R8), а в случае
+необходимости (при большом
+разбросе параметров транзисторов
+противоположных плеч) - подбором
+резистора R9 (R12).<br>
+Частота среза усилителя без
+конденсатора С2 - около 3МГц. Поэтому
+такой усилитель может найти
+широкое применение в качестве
+выходного усилителя мощности
+передатчиков проводных линей ВЧ -
+связи.</p>
+
+<br>
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td align="center"><a href="http://zpostbox.narod.ru/az6.htm"><b>PREV</b></a></td>
+<td align="center"><a href="http://zpostbox.narod.ru/az0.htm"><b>CONTENTS</b></a></td>
+<td align="center"><a href="http://zpostbox.narod.ru/az8.htm"><b>NEXT</b></a></td>
+</tr>
+</tbody></table>
+</center>
+</font>
+<!-- ><!-- "><!-- '><!-- -->
+
+
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<div style="background: transparent url(http://www.tns-counter.ru/V13a****yandex_ru/ru/CP1251/tmsec=narod_total/) repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"></div>
+<script language="JavaScript" src="az8_level_shift_files/163.htm"></script><div style="position: absolute; left: 0pt; visibility: hidden;" id="ch"><spacer type="block" width="1" height="1"></div><div style="position: absolute; left: 1317px; top: 0pt; visibility: hidden; z-index: 999;" id="bn"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az8_level_shift_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az8_level_shift_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az8_level_shift_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbu7C07BF12(); return false;"><img src="az8_level_shift_files/bu.gif" title="Спрятать" alt="Спрятать" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az8_level_shift_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az8_level_shift_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az8_level_shift_files/bb.gif" width="3"><img src="az8_level_shift_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/V0U_4iz3nRW40000ZhGLU9W4QnI8hMIV19AgkES5YgAnOGEHlD19P0QJXGsBfPDq4q9-1000" target="_blank" title="Интернет для людей"><img src="az8_level_shift_files/V0U_4aVSoS040000ZhGLU9W4QnI8hMIV19AgkES5YgAnOGEHlD19P0QJXGsB.png" alt="Интернет для людей" border="0" width="100" height="100"></a></td><td background="az8_level_shift_files/bb.gif" width="3"><img src="az8_level_shift_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az8_level_shift_files/bb.gif" width="3"><img src="az8_level_shift_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az8_level_shift_files/bb.gif" width="3"><img src="az8_level_shift_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+<div style="position: absolute; left: 1317px; top: 0pt; visibility: visible; z-index: 999;" id="bt"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az8_level_shift_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az8_level_shift_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az8_level_shift_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbd7C07BF12(); return false;"><img src="az8_level_shift_files/bd.gif" title="Показать" alt="Показать" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="clb7C07BF12();return false;"><img src="az8_level_shift_files/bc.gif" title="Закрыть" alt="Закрыть" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az8_level_shift_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az8_level_shift_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az8_level_shift_files/bb.gif" width="3"><img src="az8_level_shift_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/V0U_4iz3nRW40000ZhGLU9W4QnI8hMIV19AgkES5YgAnOGEHlD19P0QJXGsBfPDq4q9-1000" target="_blank"><font color="#000000" size="-2">Интернет для людей</font></a></td><td background="az8_level_shift_files/bb.gif" width="3"><img src="az8_level_shift_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az8_level_shift_files/bb.gif" width="3"><img src="az8_level_shift_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az8_level_shift_files/bb.gif" width="3"><img src="az8_level_shift_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+
+<!-- mailto:spm111@yandex.ru -->
+</body></html>

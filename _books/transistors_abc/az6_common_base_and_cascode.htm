@@ -1,0 +1,262 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>6. Каскад с общей базой, каскод.</title>
+</head><body alink="#ff0000" bgcolor="#ffffff" text="#0000ff" vlink="#000080" link="#0000ff">
+<font color="#000000" face="Arial"><center>
+
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td><p align="center"><font color="#0000ff" size="6"><b>6.Каскад с общей базой, каскод.</b></font></p>
+</td>
+</tr>
+</tbody></table>
+
+
+<p align="center"><font color="#0000ff"><b>1.Каскад с общей базой.</b></font></p>
+<p align="left">Каскад о с общей
+базой, как и каскад с ОК, не
+инвертирует фазу усиливаемого
+сигнала. Коэффициент усиления по
+напряжению стабилен и составляет
+приблизительно: Кi=h21э/(h21э+1)&lt;1.<br>
+Коэффициент усиления по напряжению
+(без учёта сопротивления нагрузки Rн)
+Кu=SRк=Rк/(rэ+Rк) - аналогично
+коэффициенту усиления каскада с ОЭ.
+При сопротивлении генератора Rг=0
+параллельная ОС перестаёт
+действовать и нелинейные искажения
+и выходное сопротивление Rвых в
+этом случае те же, что и в каскаде с
+ОЭ.<br>
+Выходное сопротивление
+транзистора близко к
+дифференциальному сопротивлению
+диода, т.е. Rвх=rэ=fт/Iэ и имеет
+индуктивный характер (входное
+сопротивление каскада с ОЭ и с ОК -
+ёмкостное. Iэ - постоянная
+составляющая тока эмиттера.<br>
+Поэтому при синусоидальном сигнале
+Zвх увеличивается с ростом частоты.
+Следовательно, Rб должно быть равно
+нулю или заземлено конденсатором
+достаточно большой ёмкости, что бы
+не возникал колебательный контур -
+входная ёмкость + ёмкость монтажа.<br>
+Динамическое выходное
+сопротивление очень велико -
+порядка нескольких МОм (наибольшее
+из трёх способов включения
+транзистора) без учёта
+шунтирующего влияния Rк. В реальной
+схеме оно практически равно Rк.
+Выходные характеристики
+горизонтальны и имеют линейное
+приращение тока коллектора от тока
+эмиттера.<br>
+Переходные и частотные свойства
+значительно лучше, чем у каскада с
+ОЭ. Однако эти преимущества
+проявляются только до определённых
+частот. На очень высоких частотах (например,
+СВЧ) эти свойства выравниваются и
+каскад с ОЭ может даже иметь
+приемущество.<br>
+Схема с ОБ обладает тем
+приемуществом, что на её работу
+влияет только ёмкость эмиттер-база
+Сэ и не влияет ёмкость коллектор-база
+Ск, которая увеличивается
+вследствии эффекта Миллера.<br>
+Заметное снижение нелинейных
+искажений возможно лишь при
+источнике сигнала с выходным
+сопротивлением, много большим
+входного сопротивления
+транзистора. В этом случае Iвх=Uг/(Rг+Rвх)=Uг/Rг,
+где Uг - напряжение источника
+сигнала, а коэффициент усиления по
+напряжению Кu=Rк/Rг.<br>
+</p>
+
+<p align="center"><font color="#0000ff"><b>2.Каскад усиления с трансформаторной связью.</b></font></p>
+<p align="left">Если вместо
+подачи напряжения смещения базу
+транзистора подключить к общему
+проводу, получим силовой ключ с
+эмиттерной коммутацией, который с
+успехом применяют в
+преобразователях напряжения.</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt117.gif" width="104" height="204"></p>
+
+<p align="center"><font color="#0000ff"><b>3.Микрофонный усилитель с использованием в качестве микрофона низкоомной динамической головки.</b></font></p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt118.gif" width="166" height="219"></p>
+
+<p align="center"><font color="#0000ff"><b>4.Микшер с генератором тока в цепи эмиттера.</b></font></p>
+<p align="left">Для
+стабилизации режима по постоянному
+току в цепи эмиттера используется
+генератор тока. Благодаря низкому
+входному сопротивлению каскада с
+ОБ взаимовлияние различных
+источников сигнала минимальное.
+Коэффициент передачи микшера с
+любого входа равен Кi=R2/R1, где Ri -
+сопротивление резистора R1...Rn,
+включённого в цепь источника
+сигнала. Сопротивление нагрузки Rн=R2.</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt119.gif" width="296" height="221"></p>
+
+<p align="center"><font color="#0000ff"><b>5.Частотнозависмый усилитель на каскаде ОБ в сочетании с ОЭ.</b></font></p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt120.gif" width="173" height="167"></p>
+<p align="center">зависимость коэффициента усиления от частоты:</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt121.gif" width="100" height="100"></p>
+<p align="left">Выходной сигнал
+сдвинут по фазе на 90° по отношению к
+входному в диапазоне частот от 20 Гц
+до 1 МГц. входное сопротивление Rвх=h11б=10
+Ом. Коэффициент усиления на частоте
+1000 Гц - Кu=100.</p>
+<p align="center"><font color="#0000ff"><b>6.Коррекция искажений УВ магнитофона.</b></font></p>
+<p align="left">Постоянная
+времени t1=R1C2, t2=C2R5IIRн). Сдвиг фазы на
+90° на частоте fо=1/2¶R3C1.</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt122.gif" width="194" height="173"></p>
+
+<p align="center"><font color="#0000ff"><b>7.Получение из однополярного сигнала двухполярного.</b></font></p>
+<p align="left">Элементы DD1.1 и DD1.2 должны быть с открытым коллектором.</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt123.gif" width="297" height="190"></p>
+
+<p align="center"><font color="#0000ff"><b>8.Применение каскада с ОБ для детектирования АМ сигналов.</b></font></p>
+<p align="left">По сравнению с
+традиционным детектором, такой
+детектор имеет значительно меньшие
+искажения благодаря глубокой ООС
+по низкой частоте через
+конденсатор С1 с коллектора в базу.</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt124.gif" width="208" height="113"></p>
+
+<p align="center"><font color="#0000ff"><b>9.Более совершенный детектор - "идеальный диод".</b></font></p>
+<p align="left">Коэффициент передачи Кд=R2/R1¶=1.8 . Максимальное входное напряжение Uвх.max=(Eп-2Uбэ)R1/R2=2В.</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt125.gif" width="237" height="175"></p>
+<p align="left">Введение
+дополнительного транзистора и двух
+диодов обеспечивает расширения
+детектирования в области малых
+сигналов на 10...15 дб.</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt126.gif" width="220" height="272"></p>
+
+<p align="center"><font color="#0000ff"><b>10.Каскодные усилители.</b></font></p>
+<p align="left">Наибольшее
+применение каскад с ОБ (ОЗ) находит
+в сочетании с каскадом с ОЭ (ОИ). Это
+так называемый каскод -
+последовательное соединение ОЭ-ОБ (ОИ-ОЗ).
+Каскодные усилители примечательны
+тем, что в каскадах почти полностью
+развязаны входная и выходная цепи,
+т.к. база транзистора каскада с ОБ
+имеет неизменный потенциал.
+Следовательно, в каскодных
+усилителях эффект Миллера не
+проявляется. Поскольку входное
+сопротивление каскада с ОБ
+ничтожно мало, каскад с ОЭ работает
+в режиме короткого замыкания на
+выходе (т.е. по сути работает как
+каскад с ОК), обеспечивая такое же
+усиление, как идеализированный
+каскад с ОЭ. Входное сопротивление
+на высоких частотах выше, т.к.
+существенно уменьшается входная
+ёмкость каскада. Резкое ослабление
+ОС с выхода на вход способствует
+устойчивой работе каскада,
+особенно в резонансных усилителях.</p>
+<p align="center">Возможные
+сочетания каскада с ОЭ на n-p-n
+транзисторе с каскадом ОБ (ОЗ) на
+транзисторах разной проводимости:</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt127.gif" width="107" height="74"><img src="az6_common_base_and_cascode_files/vt128.gif" width="118" height="75"><img src="az6_common_base_and_cascode_files/vt129.gif" width="114" height="73"><img src="az6_common_base_and_cascode_files/vt130.gif" width="114" height="73"></p>
+<p align="center">Аналогичные схемы для каскада с ОИ на полевом транзисторе с каналом n- типа:</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt131.gif" width="107" height="76"><img src="az6_common_base_and_cascode_files/vt132.gif" width="105" height="64"><img src="az6_common_base_and_cascode_files/vt133.gif" width="105" height="73"><img src="az6_common_base_and_cascode_files/vt134.gif" width="107" height="70"></p>
+
+<p align="center"><font color="#0000ff"><b>11.Наиболее распространённая схема каскода.</b></font></p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt135.gif" width="127" height="218"></p>
+<p align="center">Более
+совершенный каскод с
+нейтрализацией Ск каскада с ОЭ
+благодаря следящей связи через
+диоды VD1, VD2:</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt136.gif" width="107" height="241"></p>
+
+<p align="center"><font color="#0000ff"><b>12.Компенсация входной динамической ёмкости с помощью конденсатора.</b></font></p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt137.gif" width="110" height="217"></p>
+
+<p align="center"><font color="#0000ff"><b>13.Нейтрализация входной ёмкости с помощью схемы сдвига уровня на стабилитроне.</b></font></p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt138.gif" width="130" height="216"></p>
+
+<p align="center"><font color="#0000ff"><b>14.Схема
+с увеличенным коэффициентом
+усиления с сохранением высоких
+динамических характеристик путём
+применения встречной динамической
+нагрузки в сочетании с
+компенсацией входной ёмкости.</b></font></p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt139.gif" width="184" height="282"></p>
+
+<p align="center"><font color="#0000ff"><b>15.Каскад с необычным включением по постоянному току.</b></font></p>
+<p align="left">Входное сопротивление такого каскада достаточно низкое.</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt140.gif" width="126" height="232"></p>
+
+<p align="center"><font color="#0000ff"><b>16.Каскод с применением фототранзистора.</b></font></p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt141.gif" width="65" height="230"></p>
+
+<p align="center"><font color="#0000ff"><b>17.Простое устройство сложения и вычитания двух сигналов.</b></font></p>
+<p align="left">При подаче
+одинаковых сигналов на вых.2
+напряжение должно птсутствовать, в
+противном случае нужно подобрать
+резистор R7.</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt142.gif" width="199" height="301"></p>
+
+<p align="center"><font color="#0000ff"><b>18.Смешанный каскод.</b></font></p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt143.gif" width="124" height="224"></p>
+
+<p align="center"><font color="#0000ff"><b>19.Каскод с двухполярным питанием.</b></font></p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt144.gif" width="238" height="227"></p>
+
+<p align="center"><font color="#0000ff"><b>20.Каскод с коэффициентом усиления 50 и с полосой пропускания 0...1 мГц.</b></font></p>
+<p align="left">Входная ёмкость - не более 20 пФ.</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt145.gif" width="190" height="214"></p>
+
+<p align="center"><font color="#0000ff"><b>21.Широкополосный каскод с нейтрализацией входной ёмкости с помощью линейной следящей связи.</b></font></p>
+<p align="left">Входная ёмкость - около 0.1 пф.</p>
+<p align="center"><img src="az6_common_base_and_cascode_files/vt146.gif" width="154" height="202"></p>
+
+
+<br>
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td align="center"><a href="http://zpostbox.narod.ru/az4.htm"><b>PREV</b></a></td>
+<td align="center"><a href="http://zpostbox.narod.ru/az0.htm"><b>CONTENTS</b></a></td>
+<td align="center"><a href="http://zpostbox.narod.ru/az6.htm"><b>NEXT</b></a></td>
+</tr>
+</tbody></table>
+</center>
+</font>
+<!-- ><!-- "><!-- '><!-- -->
+
+
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<div style="background: transparent url(http://www.tns-counter.ru/V13a****yandex_ru/ru/CP1251/tmsec=narod_total/) repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"></div>
+<script language="JavaScript" src="az6_common_base_and_cascode_files/163.htm"></script><div style="position: absolute; left: 0pt; visibility: hidden;" id="ch"><spacer type="block" width="1" height="1"></div><div style="position: absolute; left: 1317px; top: 0pt; visibility: hidden; z-index: 999;" id="bn"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az6_common_base_and_cascode_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az6_common_base_and_cascode_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az6_common_base_and_cascode_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbu51FD98C6(); return false;"><img src="az6_common_base_and_cascode_files/bu.gif" title="Спрятать" alt="Спрятать" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az6_common_base_and_cascode_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az6_common_base_and_cascode_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az6_common_base_and_cascode_files/bb.gif" width="3"><img src="az6_common_base_and_cascode_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/KVsOnlXh3FG40000Zht-TvW4QnI8eXG11PAZLb46YgoxYmEHlD19P0QJXGsBe8gO549-1000" target="_blank" title="Яндекс.Авто"><img src="az6_common_base_and_cascode_files/KVsOnjXoiHq40000Zht-TvW4QnI8eXG11PAZLb46YgoxYmEHlD19P0QJXGsB.jpg" alt="Яндекс.Авто" border="0" width="100" height="100"></a></td><td background="az6_common_base_and_cascode_files/bb.gif" width="3"><img src="az6_common_base_and_cascode_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az6_common_base_and_cascode_files/bb.gif" width="3"><img src="az6_common_base_and_cascode_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az6_common_base_and_cascode_files/bb.gif" width="3"><img src="az6_common_base_and_cascode_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+<div style="position: absolute; left: 1317px; top: 0pt; visibility: visible; z-index: 999;" id="bt"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az6_common_base_and_cascode_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az6_common_base_and_cascode_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az6_common_base_and_cascode_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbd51FD98C6(); return false;"><img src="az6_common_base_and_cascode_files/bd.gif" title="Показать" alt="Показать" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="clb51FD98C6();return false;"><img src="az6_common_base_and_cascode_files/bc.gif" title="Закрыть" alt="Закрыть" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az6_common_base_and_cascode_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az6_common_base_and_cascode_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az6_common_base_and_cascode_files/bb.gif" width="3"><img src="az6_common_base_and_cascode_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/KVsOnlXh3FG40000Zht-TvW4QnI8eXG11PAZLb46YgoxYmEHlD19P0QJXGsBe8gO549-1000" target="_blank"><font color="#000000" size="-2">Яндекс.Авто</font></a></td><td background="az6_common_base_and_cascode_files/bb.gif" width="3"><img src="az6_common_base_and_cascode_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az6_common_base_and_cascode_files/bb.gif" width="3"><img src="az6_common_base_and_cascode_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az6_common_base_and_cascode_files/bb.gif" width="3"><img src="az6_common_base_and_cascode_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+
+<!-- mailto:spm111@yandex.ru -->
+</body></html>

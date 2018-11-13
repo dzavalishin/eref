@@ -1,0 +1,25 @@
+Descripition:
+ 
+Lowest rated working voltage: DC4.5 5V-24V
+ 
+Operating humidity range: 35%~90%RH (no frost)
+ 
+Allowing pressure: pressure 1.75Mpa
+ 
+Temperature: -25~+80 ?
+ 
+Max operating current: 15 mA (DC 5V)
+ 
+Operating voltage range: DC 5~18 V
+ 
+Load capacity: ? 10 mA (DC 5V)
+ 
+Using temperature: ? 80 ?
+ 
+External threads: 1/2"
+ 
+Size:61mm(length) * 36mm(width) * 34mm(thick)
+ 
+Notice:It is mainly used for water detection,water heaters, water cooling system,water vending machine etc.
+ 
+Product connection mode: red(+), black(-), and yellow for the pulse signal output.

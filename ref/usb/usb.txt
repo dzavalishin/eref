@@ -1,0 +1,51 @@
+Type A Plug (for USB controllers and hubs)
+------------------------------------------
+
+Solder/crimp view (or socket view)
+
+________________
+|  x  x  x  x  |
+|  1  2  3  4  |
+|              |
+----------------
+
+Pin 1	+5V	Red
+Pin 2	-Data	White
+Pin 3	+Data	Green
+Pin 4	GND	Black
+
+
+Type B Plug (for peripheral devices)
+------------------------------------
+
+Solder/crimp view (or socket view)
+
+ ________
+/  2  1  \
+|  x  x  |
+|  x  x  |
+|  3  4  |
+----------
+
+Pin 1	+5V	Red
+Pin 2	-Data	White
+Pin 3	+Data	Green
+Pin 4	GND	Black
+
+
+Mini-B Plug (for miniature peripheral devices)
+----------------------------------------------
+
+Solder/crimp view (or socket view)
+
+___________________
+|  x  x  x  x  x  |
+|  1  2  3  4  5  |
+ |               |
+  ---------------
+
+Pin 1	+5V	Red
+Pin 2	-Data	White
+Pin 3	+Data	Green
+Pin 4	key	(not connected)
+Pin 5	GND	Black

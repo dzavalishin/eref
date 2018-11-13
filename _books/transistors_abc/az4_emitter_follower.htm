@@ -1,0 +1,283 @@
+<html><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>4. Повторитель напряжения</title>
+</head><body alink="#ff0000" bgcolor="#ffffff" text="#0000ff" vlink="#000080" link="#0000ff">
+<font color="#000000" face="Arial"><center>
+
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td><p align="center"><font color="#0000ff" size="6"><b>4. Повторитель напряжения.</b></font></p>
+</td>
+</tr>
+</tbody></table>
+
+
+<p align="center"><font color="#0000ff"><b>1.Эмиттерный повторитель.</b></font></p>
+<p align="left">Эмиттерный
+повторитель имеет наибольшее
+входное сопротивление и наименьшее
+выходное и используется для
+усиления сигнала по току,
+коэффициент усиления по напряжению
+близок к единице. Однако это
+справедливо при достаточно низком
+сопротивлении источника сигнала и
+на низкой частоте. При бесконечно
+большом сопротивлении источника
+сигнала перестаёт действовать 100%
+последовательная ООС по напряжению
+и выходное сопротивление
+стремиться к Rвых каскада с общим
+эмиттером, резко возрастает
+коэффициент гармоник, который
+минимален при Rr=0.<br>
+Rвх=Rб+(1+h21э)Rн<br>
+Rвых=Rэ+(Rr+Rб)/(1+h21э)<br>
+где Rб - сопротивление базы (1...20 Ом и
+более);<br>
+h21э - коэффициент передачи тока;<br>
+Rэ=Fт/Iк(ма);<br>
+Fт=25мВ - температурный потенциал;<br>
+Rr - выходное сопротивление
+источника сигнала.</p>
+<p align="center"><img src="az3_files/vt59.gif" width="95" height="202"></p>
+<p align="left">Входное
+сопротивление резко уменьшается в
+случае коротких импульсов и на
+высоких частотах. На высоких
+частотах входная ёмкость
+повторителя зависит, главным
+образом, от Сн и грубо может быть
+оценена как Сн/h21э. Выходное
+сопротивление повторителя на
+высоких частотах может иметь
+индуктивный характер, поэтому при
+определении Сн эмиттерный
+повторители могут давать
+колебательные переходные процессы
+и даже переходить в режим
+автогенерации. Однако наиболее
+опасным следствием ёмкостной
+нагрузки является склонность
+однотактных повторителей к
+нелинейным искажениям сигнала
+высокой частоты. Наиболее
+понятнообъяснение этого явления на
+примере передачи фронта и спада
+импульсного сигнала:</p>
+<p align="center"><img src="az3_files/vt60.gif" width="80" height="150"></p>
+<p align="left">При передаче
+фронта к току транзистора помимо
+тока Iэ=Uвых/Rэ добавляется ток
+заряда Сн.<br>
+При прохождении спада сигнала ток
+перезаряда не может превысить ток,
+протекаюший через Rэ, а не через
+транзистор. Если Uвх будет
+снижаться быстрее перезаряда Сн, то
+напряжение на базе окажется ниже,
+чем на эмиттере, и транзистор
+закроется.<br>
+Максимальная частота, передаваемая
+повторителем без искажений Fmax=Iэ/2nUmCn
+, где Um - амплитуда сигнала.<br>
+Как видно из формулы, расширить
+полосу пропускания эмиттерного
+повторителя можно увеличением тока
+эмиттера. Характерные искажения
+сигнала высокой частоты в
+эмиттерном повторителе носят
+пилообразный характер:</p>
+<p align="center"><img src="az3_files/vt61.gif" width="110" height="80"></p>
+
+<p align="center"><font color="#0000ff"><b>2. Повторитель на составном транзисторе Шиклаи.</b></font></p>
+<p align="left">Rвх&gt;1МОм, коэффициент обратной связи около 50 дБ. Характеристика линейна от 10Гц до 100 кГц.</p>
+<p align="center"><img src="az3_files/vt62.gif" width="158" height="186"></p>
+
+<p align="center"><font color="#0000ff"><b>3.Составной транзистор со следящей связью в цепи базы.</b></font></p>
+<p align="left">Из-за огромного
+входного сопротивления
+повторителей на составных
+транзисторах особенно остро встаёт
+о цепи смещения базы. Делать
+сопротивления порядка нескольких
+мегаом нельзя из-за температурной
+нестабильности и невозможности
+обеспечения необходимого тока базы.
+Поэтому во входном каскаде, как
+правило, используют полевой
+транзистор или следящую связь в
+цепи базы:</p>
+<p align="center"><img src="az3_files/vt63.gif" width="211" height="221"></p>
+<p align="left">Для того что бы
+искусственно увеличить
+сопротивление Rк и исключить (нейтрализовать)
+влияние ёмкости Ск , т.е. исключить
+её перезаряд, необходимо что бы
+напряжение Uкб1 было постоянно, т.е.
+нужно изменять потенциал Uк1
+пропорционально потенциалу Uб1, ток
+через Rк и Ск станет равным нулю, а
+это равноценно увеличению их
+комплексного сопротивления. Для
+реализации этой идеи в коллектор (сток)
+первого транзистора полностью
+подаётся переменная составляющая
+выходного напряжения с помощью
+конденсатора достаточно большой
+ёмкости:</p>
+
+<p align="center"><img src="az3_files/vt64.gif" width="193" height="235"></p>
+<p align="center">или с помощью стабилитрона,схемы сдвига уровня:</p>
+<p align="center"><img src="az3_files/vt65.gif" width="151" height="211"></p>
+<p align="center">или с помощью истокового повторителя:</p>
+<p align="center"><img src="az3_files/vt66.gif" width="99" height="197"></p>
+<p align="center">Аналогичная идея реализована в широкополосном повторителе:</p>
+<p align="center"><img src="az3_files/vt67.gif" width="115" height="201"></p>
+
+<p align="center"><font color="#0000ff"><b>4.Эмиттерный повторитель с повышенным быстродействием.</b></font></p>
+<p align="left">Реализован за
+счёт быстродействующей линейной
+положительной обратной связи с
+помощью транзисторов VT1-VT3.</p>
+<p align="center"><img src="az3_files/vt68.gif" width="118" height="208"></p>
+
+<p align="center"><font color="#0000ff"><b>5.Повторитель с входным сопротивлением, стремящимся к бесконечности.</b></font></p>
+<p align="left">Благодаря
+отражателю тока на транзисторах VT1,
+VT3, токи коллекторов, а
+соответственно и токи баз
+транзисторов VT2 и VT4 равны. А так как
+токи баз противоположны, то и
+происходит их компенсация, что
+эквивалентно Rвх, равному
+безконечности.</p>
+<p align="center"><img src="az3_files/vt69.gif" width="120" height="154"></p>
+
+<p align="center"><font color="#0000ff"><b>6. Повторитель с увеличинным входным сопротивлением.</b></font></p>
+<p align="left">Rвх практически не зависит от h21э.</p>
+<p align="center"><img src="az3_files/vt70.gif" width="109" height="187"></p>
+
+<p align="center"><font color="#0000ff"><b>7.Высоколинейный эмиттерный повторитель с высокой нагрузочной способностью.</b></font></p>
+<p align="left">Амплитудное входное напряжение такого повторителя достигает напряжения питания. Сопротивление нагрузки: Rн=&gt;R3/2<br></p>
+
+<p align="center"><img src="az3_files/vt71.gif" width="186" height="185"></p>
+<p align="left">Для того,что бы
+повторитель идеально повторял
+входное напряжение на нагрузке,
+необходимо что бы напряжение Uэб
+было постоянно во всём диапазоне
+изменения входного напряжения.<br>
+Это условие можно выполнить, если
+застабилизировать ток эмиттера (коллектора).
+Для этого надо в предыдущей схеме
+токозадающий резистор R3 заменить
+активным источником тока с
+токозадающим резистором, равным
+сопротивлению нагрузки:</p>
+<p align="center"><img src="az3_files/vt72.gif" width="171" height="212">Iк=Еп/Rн=const</p>
+
+<p align="center"><font color="#0000ff"><b>8.Простейший двухтактный эмиттерный повторитель.</b></font></p>
+<p align="left">Резистор R
+уменьшает искажения типа "ступенька"
+в момент перехода через ноль (т.е. во
+время отсечки транзисторов).
+Применение такого повторителя для
+усиления слабых сигналов (до 0.4...0.5 В)
+не целесообразно.</p>
+<p align="center"><img src="az3_files/vt73.gif" width="82" height="139"></p>
+<p align="left">Введение
+смещения с помощью диодов или
+другого генератора напряжения
+позволяет избавитьтся от ступеньки.
+Ток генераторов тока должен быть
+больше максимального тока базы при
+полной раскачке выходных
+транзисторов во избежание
+запирания диодов.</p>
+
+<p align="center"><img src="az3_files/vt74.gif" width="85" height="240"></p>
+
+<p align="center"><font color="#0000ff"><b>9.Эмиттерный повторитель с увеличенным входным сопротивлением с помощью следящей обратной связи.</b></font></p>
+<p align="center"><img src="az3_files/vt75.gif" width="235" height="258"></p>
+
+<p align="center"><font color="#0000ff"><b>10. Выходной каскад на квазикомплементарной паре.</b></font></p>
+<p align="left">Верхнее плечо -
+на составном транзисторе
+Дарлингтона, нижнее - на
+транзисторе Шиклаи. Введение
+дополнительного транзистора VT2,
+аналогично VT4, VT5,
+симметрируютвходное сопротивление
+плеч. При этом искажения
+уменьшаются в 2..3 раза.</p>
+<p align="center"><img src="az3_files/vt76.gif" width="129" height="380"></p>
+
+<p align="center"><font color="#0000ff"><b>11.Двухтактные каскады.</b></font></p>
+<p align="center">По схеме Шиклаи
+(недостаток - возникновение больших
+сквозных токов при перегрузках,
+особенно на высоких частотах)</p>
+<p align="center"><img src="az3_files/vt77.gif" width="84" height="204"></p>
+<p align="center">По схеме Дарлингтона</p>
+<p align="center"><img src="az3_files/vt78.gif" width="78" height="207"></p>
+<p align="center">Повторитель по схеме Шиклаи и Дарлингтона</p>
+<p align="center"><img src="az3_files/vt79.gif" width="113" height="298"></p>
+
+<p align="center"><font color="#0000ff"><b>12.Схемы, позволяющие
+достаточно простым способом исключить полную отсечку предвыходных
+транзисторов и тем самым уменьшить коммутационные искажения.</b></font></p>
+<p align="center"><img src="az3_files/vt80.gif" width="106" height="192"><img src="az3_files/vt81.gif" width="88" height="186"></p>
+
+<p align="center"><font color="#0000ff"><b>13.Повторитель с высокой термостабильностью.</b></font></p>
+<p align="left">Недостаток -
+плохая нагрузочная способность при
+работе на низкоомную нагрузку, а
+отсюда и большие вносимые
+искаженияв виде нечётных гармоник.</p>
+<p align="center"><img src="az3_files/vt82.gif" width="113" height="238"></p>
+<p align="center">С повышенной нагрузочной способностью</p>
+<p align="center"><img src="az3_files/vt83.gif" width="188" height="322"></p>
+
+<p align="center"><font color="#0000ff"><b>14.Повторитель с повышенной нагрузочной способностью.</b></font></p>
+<p align="left">Повышенная
+нагрузочная способность
+достигнута за счёт введения
+активных источников тока в
+эмиттеры входных транзисторов.</p>
+<p align="center"><img src="az3_files/vt84.gif" width="179" height="239"></p>
+
+<p align="center"><font color="#0000ff"><b>15.Схема с повышенным быстродействием.</b></font></p>
+<p align="center"><img src="az3_files/vt85.gif" width="136" height="321"></p>
+
+<p align="center"><font color="#0000ff"><b>16.Мостовая схема повторителя.</b></font></p>
+<p align="center"><img src="az3_files/vt86.gif" width="136" height="157"></p>
+
+<p align="center"><img src="az3_files/vt87.gif" width="96" height="162"></p>
+
+<br>
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td align="center"><a href="http://zpostbox.narod.ru/az2.htm"><b>PREV</b></a></td>
+<td align="center"><a href="http://zpostbox.narod.ru/az0.htm"><b>CONTENTS</b></a></td>
+<td align="center"><a href="http://zpostbox.narod.ru/az4.htm"><b>NEXT</b></a></td>
+</tr>
+</tbody></table>
+</center>
+</font>
+<!-- ><!-- "><!-- '><!-- -->
+
+
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<div style="background: transparent url(http://www.tns-counter.ru/V13a****yandex_ru/ru/CP1251/tmsec=narod_total/) repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"></div>
+<script language="JavaScript" src="az3_files/163.htm"></script><div style="position: absolute; left: 0pt; visibility: hidden;" id="ch"><spacer type="block" width="1" height="1"></div><div style="position: absolute; left: 1317px; top: 0pt; visibility: hidden; z-index: 999;" id="bn"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az3_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az3_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az3_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbu27B58D1D(); return false;"><img src="az3_files/bu.gif" title="Спрятать" alt="Спрятать" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az3_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az3_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az3_files/bb.gif" width="3"><img src="az3_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/9xMD7GjTJSK40000ZhVmTvW4QnI8hs6V19AfjUS5YgskOGEHlD19P0QJXGsBhuLq4q9-1000" target="_blank" title="Рефераты"><img src="az3_files/9xMD7RfMpO840000ZhVmTvW4QnI8hs6V19AfjUS5YgskOGEHlD19P0QJXGsB.gif" alt="Рефераты" border="0" width="100" height="100"></a></td><td background="az3_files/bb.gif" width="3"><img src="az3_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az3_files/bb.gif" width="3"><img src="az3_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az3_files/bb.gif" width="3"><img src="az3_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+<div style="position: absolute; left: 1317px; top: 0pt; visibility: visible; z-index: 999;" id="bt"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az3_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az3_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az3_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbd27B58D1D(); return false;"><img src="az3_files/bd.gif" title="Показать" alt="Показать" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="clb27B58D1D();return false;"><img src="az3_files/bc.gif" title="Закрыть" alt="Закрыть" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az3_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az3_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az3_files/bb.gif" width="3"><img src="az3_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/9xMD7GjTJSK40000ZhVmTvW4QnI8hs6V19AfjUS5YgskOGEHlD19P0QJXGsBhuLq4q9-1000" target="_blank"><font color="#000000" size="-2">Рефераты</font></a></td><td background="az3_files/bb.gif" width="3"><img src="az3_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az3_files/bb.gif" width="3"><img src="az3_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az3_files/bb.gif" width="3"><img src="az3_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+
+<!-- mailto:spm111@yandex.ru -->
+</body></html>

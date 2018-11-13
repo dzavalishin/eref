@@ -1,0 +1,397 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>5. Каскад с общим эмиттером</title>
+</head><body alink="#ff0000" bgcolor="#ffffff" text="#0000ff" vlink="#000080" link="#0000ff">
+<font color="#000000" face="Arial"></font><center>
+
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td><p align="center"><font color="#0000ff" size="6"><b>5.Каскад с общим эмиттером.</b></font></p>
+</td>
+</tr>
+</tbody></table>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>1.Каскад с общим эмиттером.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">В простейшем
+каскаде с ОЭ входной сигнал
+подаётся на базу, а цепь эмиттера
+подключена к общему проводу.
+Каскады с ОЭ обеспечивают усиление
+как по току, так и по напряжению. Ток
+коллектора очень слабо зависит от
+напряжения на нём, поэтому
+транзистор со стороны со стороны
+коллектора в большинстве случаев
+можно рассматривать как генератор
+тока Iк с очень большим выходным
+сопротивлением.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt88.gif" width="99" height="139"></font></p>
+<p align="left"><font color="#000000" face="Arial">Крутизна
+транзистора S=1/(rэ+Rэ), где rэ=fт/Iэ -
+диференциальное сопротивление
+эмиттерного перехода - выступает в
+качестве последовательного
+сопротивления во всех схемах,
+увеличивает входное и выходное
+сопротивление транзистора.<br>
+Коэффициент усиления по напряжению
+без учёта сопротивления нагрузки Rн
+и сопротивления коллектора rк<br>
+Кu= -S Rвх= - Rк/(rэ+Rэ).<br>
+Знак "минус" говорит об
+инверсии сигнала. Это справедливо
+при Rк много меньше Rн и rк. В
+противном случае необходимо
+учитывать их шунтирующее влияние.<br>
+rк=1/h22э - выходное сопротивление
+коллектора;<br>
+h22э - выходная проводимость.<br>
+Соответственно при отсутствии Rэ Кu=
+-Rк/rэ.<br>
+Как видно из приведённой формулы,
+каскаду с ОЭ (без принятия
+дополнительных мер) свойственны
+большие нелинейные искажения, т.к. в
+знаменателе есть нелинейная
+величина rэ, имеющая сложную
+зависимость от тока коллектора.<br>
+Уменьшить нелинейные эффекты можно
+по следующим направлениям:<br>
+- уменьшение влияния rэ путём
+установки последовательно с ним
+резистора Rэ (местная ООС по току);<br>
+- компенсация влияния rэ путём
+установки последовательно с Rк
+одного или нескольких диодов
+динамическое сопротивление
+которых равно: rд=fт/Iк, тогда<br>
+Кu=(Rк+nrд)/(rэ+Rэ), где n - количество
+диодов;</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt100.gif" width="110" height="239"></font></p>
+<p align="left"><font color="#000000" face="Arial">- выбор
+оптимального тока коллектора, при
+котором минимальны изменения h21э;<br>
+- правильный выбор рабочей точки;<br>
+- применение местной ООС по
+напряжению, которая одновременно
+уменьшает влияние ёмкости Ск, так
+как шунтирует её:</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt91.gif" width="93" height="148"></font></p>
+<p align="left"><font color="#000000" face="Arial">- выбор
+оптимального сопротивления
+источника (например, подбором
+сопротивления Rп последовательно
+со входом;<br>
+- уменьшение влияния rэ путём замены
+Rк генератора тока (за счёт
+стабилизации тока коллектора);<br>
+- уменьшение нелинейных эффектов за
+счёт применения динамической
+нагрузки;<br>
+- взаимокомпенсация нелинейных
+эффектов за счёт встречной
+динамической нагрузки.<br>
+Усилительные свойства
+транзисторов сохраняются до
+напряжения насыщения, которое
+может быть в пределах от 0.2...0.3В до
+нескольких вольт в зависимости от
+тока коллектора. Например, для
+маломощных транзисторов при токах
+больше 10...20 мА насыщение может
+наступать при Uкэ=(1...2)В.<br>
+Напряжение Uбэ зависит от
+температуры и изменяется на -2.1 мВ/?С.
+Поэтому ток коллектора
+увеличивается в 10 раз при
+увеличении Т? на 30?С. Такая
+нестабильность делает смещение
+неработоспособным, т.к. даже
+небольшое изменение температуры
+выводит транзистор в режим
+насыщения или отсечки.<br>
+Входное сопротивление каскада:<br>
+Rвх=Rп+rб+h21э(rэ+Rэ) и имеет ёмкостный
+характер.<br>
+При отсутствии Rп и Rэ и если
+пренебречь rб, то<br>
+Rвх=h21э rэ=h21э25/Iк (мА), Ом<br>
+Отсюда видно, что Rвх величина не
+постоянная, меняется при изменении
+входного сигнала, т.к. меняется Iк.<br>
+Диапазон изменениявходного
+сигнала при Rэ=0, при котором
+сохраняется линейный режим, не
+превышает 2-fт=50 мВ.<br>
+Коэффициент передачи тока h21э не
+постоянен и имеет сложную
+зависимость для тока коллектора (для
+маломощных транзисторов). В
+зависимости от типа транзистора
+максимум коэффициента передачи
+может наступать при токах
+коллектора от 1-2 мА для маломощных
+транзисторов, до нескольких ампер -
+для мощных. В режиме насыщения
+наблюдается резкое падение
+коллекторного тока независимо от
+тока базы, при этом коллекторный
+переход оказывается
+прямосмещённым.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt89.gif" width="100" height="110"></font></p>
+<p align="left"><font color="#000000" face="Arial">При
+сопротивлении источника сигнала
+Rr&gt;Rвх можно считать, что источник
+входного сигнала электрически
+замкнут накоротко. При этом входной
+ток Iвх=Евх/Rr и практически не
+зависит от изменяющегося Rвх, где
+Евх ЭДС источника сигнала.<br>
+Следовательно усиление будет
+происходить с малыми нелинейными
+искажениями, поскольку зависимость
+выходного тока транзистора от
+входного практически линейна, хотя
+входное напряжение Uвх=IвхRвх -
+нелинейно.<br>
+Однако не следует думать, что чем Rr
+больше Rвх, тем лучше. Для
+транзисторного каскада характерна
+вполне определённая оптимальная
+величина как внутреннего
+сопротивления источника сигнала,
+так и тока коллектора.Необходимо
+также учитывать, что Rк шунтируется
+входным делителем каскада.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt90.gif" width="100" height="110"></font></p>
+<p align="left"><font color="#000000" face="Arial">Ёмкость
+коллекторного перехода Ск является
+барьерной ёмкостью и зависит от
+напряжения на коллекторе, т.е.носит
+динамический характер.<br>
+Подобно тому как Сэ уменьшается в (Кu+1)
+раз в эмиттерном повторителе
+благодаря положительной ОС в
+каскаде с ОЭ Ск увеличивается во
+столько же раз благодаря
+отрицательной ОС, что равносильно
+подключению параллельно входу
+динамической ёмкости Ск (Кu+1). В
+большинстве случаев она оказывает
+отрицательное влияние, однако
+иногда используют и её. В этом и
+заключается так называемый эффект
+Миллера.<br>
+Частоту среза каскада снижает не
+только входная динамическая
+ёмкость,но и ёмкость нагрузки, в том
+числе и монтажа. Расширить полосу
+пропускания можно следующим
+образом:<br>
+- Уменьшить Rн при одновременном
+увеличении Iк, т.к. усиление
+прямопропорционально Iк/Св;<br>
+- применить транзисторы с малыми
+ёмкостями переходов;<br>
+- отделить нагрузку эмиттерным
+повторителем.<br>
+Как отмечалось выше, простейший
+каскад не обладает
+термостабильностью, поэтому
+практически не используется. Вот
+один из способов так называемой
+коллекторной термостабилизации с
+приминением отрицательнной
+обратной связи по напряжению:</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt91.gif" width="93" height="148"></font></p>
+<p align="left"><font color="#000000" face="Arial">Если взять
+исходное напряжение Uк равным 0.5Еп,
+то Rк=0.5Еп/Iк, сопротивление в цепи
+базы Rб=0.75Еп/Iб=0.5Еп h21э/Iк.</font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>2.Пример коллекторной стабилизации с исключением влияния ООС по переменному току.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">Базовый резистор заменён Т - мостом, где С=Кu/F2pн pR1. Обычно R1 принимают равным R2.</font></p>
+<p align="center"><font color="#000000" face="Arial"><b><img src="az4_files/vt92.gif" width="145" height="144"></b></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>3.Каскад с компенсационным смещением на согласованном транзисторе.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">Используется
+для усиления относительно слабых
+сигналов. Изменение температуры не
+влияет на работу схемы.</font></p>
+<p align="center"><font color="#000000" face="Arial"><b><img src="az4_files/vt93.gif" width="168" height="159"></b></font></p>
+<p align="center"><font color="#000000" face="Arial">Аналогичный каскад с трансформаторной связью на входе.</font></p>
+<p align="center"><font color="#000000" face="Arial"><b><img src="az4_files/vt94.gif" width="145" height="150"></b></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>4.Каскад с эмиттерной стабилизацией с помощью ООС по току.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">RC - цепь,
+параллельную резистору Rэ
+применяют для увеличения усиления
+по переменному току, а так же для
+коррекции АЧХ каскада.
+Сопротивление резистора Rэ в
+зависимости от тока
+коллекторавыбирают от долей ома в
+мощных выходных каскадах до
+нескольких килоом в маломощных. Ток
+базового делителя желательно иметь
+примерно в 10 раз больше тока базы.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt95.gif" width="114" height="179"></font></p>
+
+<p align="center"><font color="#000000" face="Arial">Цепь смещения при двухполярном питании:</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt96.gif" width="115" height="196"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>5.Один из вариантов применения токового зеркала для термостабилизации.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">За счёт
+применения Rэ динамический
+диапазон такой схемы выше, чем у
+каскада с компенсационным
+смещением на согласованном
+транзисторе.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt97.gif" width="113" height="185"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>6.Трёхкаскадный усилитель со взаимной стабилизацией всех каскадов на токовом зеркале Уилсона.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">Коэффициент
+усиления - 5000 и более. Недостаток -
+низкая нагрузочная способность,
+проявляющаяся в явно выраженных
+искажениях в виде чётных гармоник.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt98.gif" width="142" height="272"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>7.Усилитель с комбинированной стабилизацией на составном транзисторе Шиклаи.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">Входное
+сопротивление каскада - около 200 кОм,
+коэффициент усиления Кu=K2/K3=10.</font></p>
+
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt99.gif" width="128" height="228"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>8.Составной транзистор с генератором тока вместо Rк.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">Позволяет
+получить усиление 20000 и более.
+Реализовать такое усиление можно
+только при работе каскада на
+составной эмиттерный или истоковый
+повторитель.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt101.gif" width="97" height="250"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>9.Каскад с общим истоком.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">В отличие от
+каскада с ОЭ нелинейные искажения
+значительно меньше, поскольку
+напряжение отсечки Uотс=1..5В намного
+больше, чем температурный
+потенциал fт=25мВ биполярных
+транзисторов. Линейная
+областьвходных напряжений
+значительно шире и сильно зависит
+от выбора рабочей точки Iсп/Iсmах ,
+где Iсп - ток стока покоя, I сmах -
+максимальный ток стока.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt102.gif" width="72" height="184"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>10.Каскад с повышенным благодаря следящей связи входным сопротивлением.</b></font></font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt103.gif" width="124" height="231"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>11.Малошумящий усилитель.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">Коэффициент
+усиления -10;<br>
+полоса пропускания, Гц - 5...25000;<br>
+номинальное входное напряжение -150мВ;<br>
+максимальное входное напряжение -
+700мВ;<br>
+коэффийиент шума - 80...85 дБ;<br>
+коэффицмент гармоник - &lt;0.05%</font></p>
+
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt104.gif" width="159" height="245"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>12.Усилитель с разветвлением сигналов на несколько каналов с помощью истоковых повторителей.</b></font></font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt105.gif" width="319" height="274"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>13.Усилитель с динамической нагрузкой.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">имеет
+коэффициент усиления около 100...150.
+Благодаря съёму сигнала с эмиттера
+транзистора VT2 каскад имеет низкое
+входное сопротивление. Номинальное
+входное напряжение - 20мВ.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt106.gif" width="214" height="271"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>14.Повышение эффективности динамической нагрузки с помошью токового зеркала.</b></font></font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt107.gif" width="121" height="258"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>15.Каскад с ОИ с динамической нагрузкой (Ку=500).</b></font>/p&gt;
+</font></p><p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt108.gif" width="140" height="226"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>16.Усилитель с эмиттерным повторителем в качестве буферного каскада.</b></font></font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt109.gif" width="152" height="237"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>17.Малошумящий микшер для микрофона.</b></font></font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt110.gif" width="489" height="305"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>18.Усилительный каскад в интегральном исполнении.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">Для получения
+необходимой АЧХ или её коррекции
+вместо Rк или параллельно ему
+включают различные (параллельные
+или последовательные) LC - или RC -
+цепи. Входное сопротивление
+каскада с общей базой (ОБ) на
+определённых частотах имеет
+индуктивную сосставляющую, которую
+можно использовать для ВЧ -
+коррекции.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt111.gif" width="180" height="244"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>19.НЧ - коррекция с помощью отражателя тока.</b></font></font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt112.gif" width="140" height="201"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>20.Малошумящий усилитель со встречной динамической нагрузкой.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">Кус=10.
+Минимального уровня шумов
+добиваются подбором R5, который
+зависит от напряжения питания. При
+этом ток коллектора обычно
+находится в пределах 30...50 мА.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt113.gif" width="198" height="244"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>21.Каскад со встречной динамической нагрузкой.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">При работе
+такого каскада на каскад с высоким
+входным сопротивлением
+коэффициент усиления может
+достигать 5000.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt114.gif" width="163" height="150"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>22.Мостовая схема для увеличения мощности в 4 раза.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">Для управления
+используются противофазные
+сигналы.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt115.gif" width="140" height="247"></font></p>
+
+<p align="center"><font color="#000000" face="Arial"><font color="#0000ff"><b>23.Выходной каскад усилителя мощности.</b></font></font></p>
+<p align="left"><font color="#000000" face="Arial">Благодаря применению дополнительных транзисторов VT5, VT6 исключены сквозные токи.</font></p>
+<p align="center"><font color="#000000" face="Arial"><img src="az4_files/vt116.gif" width="139" height="269"></font></p>
+
+<font color="#000000" face="Arial"><br>
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td align="center"><a href="http://zpostbox.narod.ru/az3.htm"><b>PREV</b></a></td>
+<td align="center"><a href="http://zpostbox.narod.ru/az0.htm"><b>CONTENTS</b></a></td>
+<td align="center"><a href="http://zpostbox.narod.ru/az5.htm"><b>NEXT</b></a></td>
+</tr>
+</tbody></table>
+</font></center>
+<font color="#000000" face="Arial"></font>
+<!-- ><!-- "><!-- '><!-- -->
+
+
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<div style="background: transparent url(http://www.tns-counter.ru/V13a****yandex_ru/ru/CP1251/tmsec=narod_total/) repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"></div>
+<script language="JavaScript" src="az4_files/163.htm"></script><div style="position: absolute; left: 0pt; visibility: hidden;" id="ch"><spacer type="block" width="1" height="1"></div><div style="position: absolute; left: 1317px; top: 0pt; visibility: visible; z-index: 999;" id="bn"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az4_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az4_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az4_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbu53D629FF(); return false;"><img src="az4_files/bu.gif" title="Спрятать" alt="Спрятать" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az4_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az4_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az4_files/bb.gif" width="3"><img src="az4_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/KzOf_xqdbRy40000ZhjlWPW4QnI8hMIV19AgkES5YgAnOGEHlD19P0QJXGsBfPDq4q9-1000" target="_blank" title="Интернет для людей"><img src="az4_files/KzOf_pMucSS40000ZhjlWPW4QnI8hMIV19AgkES5YgAnOGEHlD19P0QJXGsB.png" alt="Интернет для людей" border="0" width="100" height="100"></a></td><td background="az4_files/bb.gif" width="3"><img src="az4_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az4_files/bb.gif" width="3"><img src="az4_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az4_files/bb.gif" width="3"><img src="az4_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+<div style="position: absolute; left: 1317px; top: 0pt; visibility: hidden; z-index: 999;" id="bt"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az4_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az4_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az4_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbd53D629FF(); return false;"><img src="az4_files/bd.gif" title="Показать" alt="Показать" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="clb53D629FF();return false;"><img src="az4_files/bc.gif" title="Закрыть" alt="Закрыть" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az4_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az4_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az4_files/bb.gif" width="3"><img src="az4_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/KzOf_xqdbRy40000ZhjlWPW4QnI8hMIV19AgkES5YgAnOGEHlD19P0QJXGsBfPDq4q9-1000" target="_blank"><font color="#000000" size="-2">Интернет для людей</font></a></td><td background="az4_files/bb.gif" width="3"><img src="az4_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az4_files/bb.gif" width="3"><img src="az4_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az4_files/bb.gif" width="3"><img src="az4_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+
+<!-- mailto:spm111@yandex.ru -->
+</body></html>

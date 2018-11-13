@@ -1,0 +1,437 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>11.Синхронные выпрямители.</title>
+</head><body alink="#ff0000" bgcolor="#ffffff" text="#0000ff" vlink="#000080" link="#0000ff">
+<font color="#000000" face="Arial">
+<center>
+
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td align="center"><p align="center"><font color="#0000ff" size="6"><b>11.Синхронные выпрямители.</b></font></p>
+</td>
+</tr>
+</tbody></table>
+
+
+<p align="left">Диодный
+выпрямитель прямоугольного
+напряжения, выполненный на
+теоретически идеальных диодах, не
+может иметь КПД выше 94.6% если
+напряжение на нагрузке равно 5В.
+Такой же выпрямитель на реальных
+диодах с падением напряжения 0.8В не
+позволяет получить КПД выше 86.2%.
+Диоды Шоттки с падением напряжения
+0.5В позволяют получить КПД 0.909.
+Применение синхронного
+выпрямителя (СВ) на полевых МДП -
+транзисторах с падением напряжения
+0.1...0.2В повышает КПД до 0.962 и более.<br>
+n=Uэф/(Uэф-Uси нас)<br>
+.Входные ёмкости полевых МДП -
+транзисторов больше выходных, но
+значительно меньше чем у
+соответствующих биполярных
+транзисторов. Так, например, у КТ908
+Свх=10нФ, в то вреия как у 75 - ваттного
+2П904 Свх - не более 200пФ.<br>
+Характеристики переключения
+измеряются долями и единицами
+наносекунд, что на один - два
+порядка превосходит
+быстродействие биполярных
+транзисторов.<br>
+Недостатки:<br>
+- значительная амплитуда входных
+отпирающих импульсов (от 5 до 15 В);<br>
+- спад крутизны S при больших токах
+стока.<br>
+Анализ вольт - амперных
+характеристик некоторых МДП
+транзисторов при Uж=15В</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt232.gif" width="200" height="200"></p>
+
+<p align="left">позволяют
+сделать следующие выводы:<br>
+- при снижении тока, протекающего
+через транзистор, пропорционально
+снижается напряжение сток-исток, т.е.
+при параллельном включении
+дополнительно повышается КПД;<br>
+- потери мощности на управление
+незначительны, т.к. ток в цепи
+затвора близок к нулю;<br>
+- на затвор необходимо подавать
+максимально возможный потенциал
+как прямом, так и в запирающем
+направлении.<br>
+Основные требования к МДП -
+транзисторам для применения в СВ:<br>
+- прибор должен быть полностью
+закрыт при нулевом потенциале
+затвора или при подаче на затвор
+запирающего потенциала;<br>
+- сток и исток прибора должны быть
+взаимозаменяемыми, т.е. прибор
+должен отпираться в обратном
+направлении так же хорошо, как и в
+прямом.<br>
+По способу управления схемы СВ с
+полевыми транзисторами делятся на
+две группы:<br>
+- с управлением по цепи затвор - сток:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt233.gif" width="176" height="207"><img src="az11_syncro_rectif_files/vt235.gif" width="171" height="123"></p>
+
+<p align="left">- с управлением по цепи затвор - исток:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt234.gif" width="176" height="207"><img src="az11_syncro_rectif_files/vt236.gif" width="171" height="123"></p>
+
+<p align="left">В свою очередь по способу включения транзисторов СВ бывают:<br> - прямого включения</p>
+<p align="center"><img src="az11_syncro_rectif_files/vt233.gif" width="176" height="207"><img src="az11_syncro_rectif_files/vt235.gif" width="171" height="123"></p>
+
+<p align="left">- инверсного включения</p>
+<p align="center"><img src="az11_syncro_rectif_files/vt234.gif" width="176" height="207"><img src="az11_syncro_rectif_files/vt236.gif" width="171" height="123"></p>
+
+<p align="left">Чаще используют схемы инверсного включения. Схемы</p>
+<p align="center"><img src="az11_syncro_rectif_files/vt234.gif" width="176" height="207"><img src="az11_syncro_rectif_files/vt236.gif" width="171" height="123"></p>
+<p align="left">при выпрямленном напряжении 10...15 В (зависит от Uзи нас) можно упростить до вида</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt237.gif" width="171" height="123">и<img src="az11_syncro_rectif_files/vt238.gif" width="171" height="123"></p>
+<p align="left">соответственно.<br>
+При работе СВ на нагрузку с
+ёмкостной реакцией необходимо
+управление транзисторами в
+зависимости от зарядного тока, что
+позволяет схема с трансформатором
+тока (с инверсным включением
+транзисторов и с управлением по
+цепи затвор - исток):</p>
+<p align="center"><img src="az11_syncro_rectif_files/vt239.gif" width="214" height="212"></p>
+
+<p align="center"><font color="#0000ff"><b>ПТ как переменный электрически управляемый резистор.</b></font></p>
+<p align="left">При
+относительно малых стоковых
+напряжениях (меньше Uси нас)
+открытые каналы ПТ ведут себя
+практически как линейные резисторы,
+проводимость которых зависит от
+напряжения затвора.<br>
+Проводимость транзистора с
+управляющим p-n переходом:<br>
+Gк=Gко(1-Uзи/Uзи отс)<br>
+Проводимость МДП - транзистора с
+индуцироавнным каналом:<br>
+Gк=b[Uзи - Uзи пор]<br>
+где b - постоянный коэффициент,
+зависящий от геометрических
+размеров и материала диэлектрика с
+размерностью A/B.<br>
+При смене полярности стокового
+напряжения линейность
+сопротивления (или проводимости )
+не нарушается, поэтом полевой
+транзистор может использоваться
+как переменный электрически
+управляемый линейный резистор для
+постоянного и переменного токов.<br>
+В качестве примера на рисунке
+показан управляемый аттенюатор
+схемы АРУЗ магнитофона:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt240.gif" width="170" height="119"></p>
+
+<p align="left">В качестве
+активного элемента можно
+использовать транзистор типа КП103К(Л,М)
+или набор транзисторов типа КР504НТ3В.<br>
+Следует заметить, что на обратное
+напряжение стока накладываются
+дополнительные ограничения. Для ПТ
+с управляющим p-n переходом
+необходимо, что бы [Uси] =&lt; [Uзи] + 0.5В,
+в противном случае при воздействии
+обратного стокового напряжения
+участок управляющего p-n перехода
+возле стока окажется открытым
+настолько, что в стоковом цепи
+потечёт значительный прямой ток
+затвора, нарушающий линейность
+резистора.<br>
+Если подложка МДП - транзистора
+имеет отдельный вывод, диапазон
+обратных стоковых напряжений можно
+увеличить, подав на подложку
+относительно истока запирающее
+напряжение.<br>
+Для ПТ с управляющим p-n переходом
+минимальное значение
+регулируемого сопротивления
+соответствует полностью открытому
+каналу (при Uзи=0), максимальное
+теоретически равное бесконечности,
+но на практике ограниченное
+условием [Uси] =&lt; [Uси нас]/2<br>
+Дальнейшее увеличение
+сопротивления канала путём
+увеличения Uзи приводит к
+уменьшению Uси нас, из-за чего
+нарушается линейность резистора
+для прямых стоковых напряжений.<br>
+Начальные участки семейства
+стоковых характеристик полевого
+транзистора с управляющим p-n
+переходом:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt241.gif" width="240" height="170"></p>
+
+<p align="left">Начальные участки семейства стоковых характеристик МДП - транзистора:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt242.gif" width="240" height="170"></p>
+
+<p align="left">Зависимость сопротивления канала от напряжения затвора для транзистора типа КП102:</p>
+<p align="center"><img src="az11_syncro_rectif_files/vt243.gif" width="250" height="180"></p>
+
+<p align="left">Зависимость сопротивления канала от напряжения затвора для транзистора типа КП303:</p>
+<p align="center"><img src="az11_syncro_rectif_files/vt244.gif" width="180" height="180"></p>
+
+<p align="left">для этой схемы включения:</p>
+<p align="center"><img src="az11_syncro_rectif_files/vt245.gif" width="178" height="93"></p>
+
+<p align="left">В качестве
+электрически управляемого
+резистора ПТ используют в
+управляемых RC - фильтрах,
+генераторах, аттенюаторах для
+осуществления автоматической
+регулировки усиления (АРУ) и других
+устройствах.<br>
+Электрически управляемый RC -
+генератор с трёхзвенной
+фазосдвигающей цепочкой в цепи
+обратной связи:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt246.gif" width="287" height="208"></p>
+
+<p align="left">Каждое звено
+цепочки создаёт сдвиг по фазе на 60°,
+при этом суммарный сдвиг
+составляет 180°, т.е. возникает
+положитеольная ОС на частоте <br>
+f=(3^0.5)RC/2=0.85RC<br>
+где R - сопротивление звеньев
+фазосдвигающей цепи.<br>
+Необходимо учесть, что коэффициент
+передачи трёхзвенной
+фазосдвигающей цепи равен 1/29,
+поэтому коэффициент усиления
+активного элемента должен быть К=&gt;29.<br>
+Применение отражателя тока в
+гетеродине повышает стабильность
+частоты примерно на порядок по
+сравнению с обычным генератором:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt247.gif" width="224" height="246"></p>
+
+<p align="left">Простой генератор качающейся частоты (от 300Гц до 3.4кГц):</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt248.gif" width="750" height="283"></p>
+
+<p align="left">Период качания
+от 0.15 до 0.5 с устанавливают
+резистором R2. На транзисторах VT1 - VT3
+и конденсаторе С2 собран генератор
+пилообразного напряжения,
+амплитуда которого, а
+соответственно и верхняя частота
+качания регулируются резистором R6.
+Нижнюю частоту устанавливают
+резистором R18. С помощью
+переключателя S1 можно установить
+необходимые дискретные частоты.<br>
+Простой индикатор скрытой проводки:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt249.gif" width="335" height="300"></p>
+
+<p align="left">Вдали от
+токоведущих частей он издаёт
+короткий звуковой сигнал частотой
+около 3кГц и периодом следования
+около 2 с, длительность которого
+определяется элементами R1, R2, C1. По
+мере приближения к токоведущим
+частям частота следования звуковых
+сигналов повышается. В качестве
+датчика использован конденсатор в
+виде кружка из двустороннего
+стеклотекстолита, одна обкладка
+которого припаяна к гильзе -
+корпусу и подключена к подложке ПТ,
+а вторая - к затвору. </p>
+
+<p align="center">Вариант прибора со световой индикацией:</p>
+<p align="center"><img src="az11_syncro_rectif_files/vt250.gif" width="255" height="88"></p>
+
+<p align="left">Пример усилителя с регулируемым коэффициентом передачи:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt251.gif" width="263" height="172"></p>
+
+<p align="left">Коэффициент
+передачи можно изменять в пределах
+от 1 до 1000, при этом искажения малы
+вплоть до ограничения сигнала
+напряжением питания. Уменьшению
+искажений способствует
+линеаризирующая цепочка R2C1.</p>
+
+<p align="left">Другие способы компенсации нелинейности:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt252.gif" width="209" height="164"><img src="az11_syncro_rectif_files/vt253.gif" width="196" height="154"></p>
+
+<p align="left">Частным случаем
+усилительного режима является
+ключевой режим, характеризующийся
+двумя крайними состояниями.
+Достоинством электронного ключа на
+ПТ является высокое быстродействие
+и практически полное отсутствие
+расхода мощности коммутируемого
+сигнала. Для примера, ослабление
+ключа, представленного на этом
+рисунке:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt254.gif" width="329" height="175"></p>
+
+<p align="left">- более 80дБ на частоте 100МГц. </p>
+
+<p align="left">Пример упрощённого аналогового ключа:</p>
+<p align="center"><img src="az11_syncro_rectif_files/vt255.gif" width="221" height="191"></p>
+
+<p align="left"><font color="#0000ff"><b>Инжекционно - полевой транзистор (ИТП) </b></font>представляет собой прибор с
+отрицательным дифференциальным
+сопротивлением на основе
+биполярного и полевого
+транзисторов - так называемого
+негатрона. Эквивалентная схема
+негатрона:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt256.gif" width="105" height="105"></p>
+
+<p align="left">Вольт - амперная характеристика ИПТ:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt257.gif" width="470" height="200"></p>
+
+<p align="left">Пример реализации генератора импульсов:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt258.gif" width="138" height="148"></p>
+
+<p align="left">После подачи напряжения питания на генератор
+конденсатор C1 заряжается до
+напряжения Umax , после чего
+происходит лавинообразное
+включение ИПТ, который вызывает
+разряд конденсатора до напряжения
+Umin, после чего ИПТ выключается и
+процесс повторяется.<br>
+Период колебаний изменяется от 2 до
+100 мс при изменении сопротивления
+резистора R1 от 1.7 до 100МОм.<br>
+Усовершенствованный генератор,
+коэффициент перестройки по частоте
+которого на проядок больше (Т=0.4...240мс
+при изменении R1 от 0.03 до 34 МОм):</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt259.gif" width="180" height="153"></p>
+
+<p align="left">Каскодный аналог негатрона:</p>
+<p align="center"><img src="az11_syncro_rectif_files/vt260.gif" width="167" height="236"></p>
+
+<p align="left">может
+эффективно использоваться в
+генераторных устройствах, датчиках,
+фильтрах, компенсаторах затухания
+сигнала, в линиях связи, в
+устройствах задержки и памяти.
+Вольтамперная характеристика
+такого негатрона:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt261.gif" width="160" height="140"></p>
+
+<p align="left">Питание
+негатронов от одного или двух
+генераторов тока способствует
+улучшению стабильности
+характеристик и расширению их
+функционольных возможностей:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt262.gif" width="117" height="248"><img src="az11_syncro_rectif_files/vt263.gif" width="174" height="201"></p>
+
+<p align="left">Вольтамперная характеристика негатрона с генератором тока:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt264.gif" width="200" height="150"></p>
+
+<p align="left">При соответствующем выборе параметров элементов схемы </p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt262.gif" width="117" height="248"></p>
+
+<p align="left">вольтамперная характеристика может проходить через ноль тока и напряжения:</p>
+
+<p align="center"><img src="az11_syncro_rectif_files/vt265.gif" width="200" height="150"></p>
+
+<p align="left">Поэтому он может
+эффективно использоваться в
+компенсаторах затухания сигнала в
+линиях связи, для улучшения
+параметров широкополосных
+трансформаторов, в устройствах
+памяти.</p>
+
+<p align="left"><font color="#0000ff"><b>Другая
+разновидность полевых
+транзисторов - ДМОП транзисторы</b></font>, которые изготавливают
+методом двойной диффузии с
+горизонтальной структурой [n-p-n-n] и
+индуцированным каналом n - типа.
+Такой транзистор представляет
+собой интегральную схему,
+состоящую из множества МОП -
+транзисторных ячеек, соединённых
+параллельно. Каждая из ячеек и в
+целом мощный полевой транзистор
+могут быть представлены
+эквивалентной схемой, включающей
+последовательно три полевых
+транзистора (обогащённый,
+обеднённый и с p-n переходом),
+шунтированные паразитным
+биполярным транзистором (также
+мощным), поскольку количество
+биполярных транзисторов,
+включённых параллельно, равно
+количеству ячеек.</p>
+
+<br>
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td align="center"><a href="http://zpostbox.narod.ru/az9.htm"><b>PREV</b></a></td>
+<td align="center"><a href="http://zpostbox.narod.ru/az0.htm"><b>CONTENTS</b></a></td>
+</tr>
+</tbody></table>
+</center>
+</font>
+<!-- ><!-- "><!-- '><!-- -->
+
+
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<div style="background: transparent url(http://www.tns-counter.ru/V13a****yandex_ru/ru/CP1251/tmsec=narod_total/) repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"></div>
+<script language="JavaScript" src="az11_syncro_rectif_files/163.htm"></script><div style="position: absolute; left: 0pt; visibility: hidden;" id="ch"><spacer type="block" width="1" height="1"></div><div style="position: absolute; left: 1317px; top: 0pt; visibility: hidden; z-index: 999;" id="bn"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az11_syncro_rectif_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az11_syncro_rectif_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az11_syncro_rectif_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbu7F438F90(); return false;"><img src="az11_syncro_rectif_files/bu.gif" title="Спрятать" alt="Спрятать" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az11_syncro_rectif_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az11_syncro_rectif_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az11_syncro_rectif_files/bb.gif" width="3"><img src="az11_syncro_rectif_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/VqEFa2Vzeru40000Zh4RU9W4QnI8Y0sIgOKz1egi_w83aRpGIMG6auKDYwyKEHL2V0G0" target="_blank" title="Яндекс.Видео"><img src="az11_syncro_rectif_files/VqEFa7UOvxG40000Zh4RU9W4QnI8Y0sIgOKz1egi_w83aRpGIMG6auKDYw0L.png" alt="Яндекс.Видео" border="0" width="100" height="100"></a></td><td background="az11_syncro_rectif_files/bb.gif" width="3"><img src="az11_syncro_rectif_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az11_syncro_rectif_files/bb.gif" width="3"><img src="az11_syncro_rectif_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az11_syncro_rectif_files/bb.gif" width="3"><img src="az11_syncro_rectif_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+<div style="position: absolute; left: 1317px; top: 0pt; visibility: visible; z-index: 999;" id="bt"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az11_syncro_rectif_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az11_syncro_rectif_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az11_syncro_rectif_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbd7F438F90(); return false;"><img src="az11_syncro_rectif_files/bd.gif" title="Показать" alt="Показать" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="clb7F438F90();return false;"><img src="az11_syncro_rectif_files/bc.gif" title="Закрыть" alt="Закрыть" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az11_syncro_rectif_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az11_syncro_rectif_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az11_syncro_rectif_files/bb.gif" width="3"><img src="az11_syncro_rectif_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/VqEFa2Vzeru40000Zh4RU9W4QnI8Y0sIgOKz1egi_w83aRpGIMG6auKDYwyKEHL2V0G0" target="_blank"><font color="#000000" size="-2">Яндекс.Видео</font></a></td><td background="az11_syncro_rectif_files/bb.gif" width="3"><img src="az11_syncro_rectif_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az11_syncro_rectif_files/bb.gif" width="3"><img src="az11_syncro_rectif_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az11_syncro_rectif_files/bb.gif" width="3"><img src="az11_syncro_rectif_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+
+<!-- mailto:spm111@yandex.ru -->
+</body></html>

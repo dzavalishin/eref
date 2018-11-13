@@ -1,0 +1,303 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>7.Каскад с эмиттерными (истоковыми) связями. Дифкаскад.</title>
+</head><body alink="#ff0000" bgcolor="#ffffff" text="#0000ff" vlink="#000080" link="#0000ff">
+<font color="#000000" face="Arial"><center>
+
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td><p align="center"><font color="#0000ff" size="6">7.Каскад с эмиттерными (истоковыми) связями. Дифкаскад.</font></p>
+</td>
+</tr>
+</tbody></table>
+
+
+<p align="center"><font color="#0000ff"><b>1.Упрощённые схемы каскадов с комбинированными связями:</b></font></p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt147.gif" width="108" height="84">
+<img src="az7_emitter_connection_and_differential_files/vt148.gif" width="104" height="81"><img src="az7_emitter_connection_and_differential_files/vt149.gif" width="104" height="75">
+<img src="az7_emitter_connection_and_differential_files/vt150.gif" width="110" height="75"></p>
+
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt151.gif" width="110" height="69">
+<img src="az7_emitter_connection_and_differential_files/vt152.gif" width="110" height="74">
+<img src="az7_emitter_connection_and_differential_files/vt153.gif" width="119" height="83"><img src="az7_emitter_connection_and_differential_files/vt154.gif" width="124" height="91"></p>
+<p align="left">Одно из основных
+достоинств таких каскадов состоит
+в том, что выходная цепь таких
+усилительных каскадов благодаря
+низкоомной связи (низкоомного
+выходного каскада с ОК с низкоомным
+входным каскадом с ОБ) слабо
+связана с входной. Очевидно, что в
+таких схемах эффект Миллера
+отсутствует.<br>
+Входное сопротивление каскада на
+биполярных транзисторах (без учёта
+входного делителя) равно входному
+сопротивлению каскада с ОК:<br>
+Rвх=rб+(1+h21э)h11б2<br>
+Входное сопротивление каскада с
+полевым транзистором на входе
+определяется, в основном, входным
+делителем.<br>
+Выходное сопротивление
+соответствует выходному
+сопротивлению каскада с ОБ (ОЗ).<br>
+Коэффициент усиления по напряжению
+равен произведению коэффициентов
+передачи каскадов с ОК (ОИ) и с ОБ (ОЗ),
+а так как коэффициент передачи
+каскада ОК (ОИ) примерно равен
+единице, то по существу коэффициент
+усиления определяется вторым
+множителем. Таким образом входные и
+выходные и выходные параметры
+таких каскадов соответствуют
+параметрам каскадов с ОК (ОС) и ОБ (ОЗ)
+соответственно.</p>
+
+<p align="center"><font color="#0000ff"><b>2.Пример использования каскада для усиления сигналов ВЧ.</b></font></p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt155.gif" width="183" height="239"></p>
+
+<p align="center"><font color="#0000ff"><b>3.Широкополосный генератор.</b></font></p>
+<p align="left">При изменении
+резистора R1 в пределах 50 МОм ... 10 кОм
+имеет перестройку частоты
+выходного сигнала от 100Гц до 400кГц.</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt156.gif" width="188" height="245"></p>
+
+<p align="center"><font color="#0000ff"><b>4.Высокочастотный генератор.</b></font></p>
+<p align="left">Период следования импульсов T=3.1RC; частота - до 50МГц.</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt157.gif" width="168" height="201"></p>
+
+<p align="center"><font color="#0000ff"><b>5.Пример применения каскада с эмиттерными связями в фазовом детекторе.</b></font></p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt158.gif" width="222" height="249"></p>
+
+<p align="center"><font color="#0000ff"><b>6.Простейший балансный преобразователь частоты.</b></font></p>
+<p align="left">Достоинства: <br>
+1. Компенсация всех синфазных помех,
+в тои числе сигнала гетеродина и
+его шумов;<br>
+2. Компенсация чётных гармоник, что
+приводит к уменьшению числа
+побочных каналов.<br>
+Более сложные смесители
+выпускаются в микросхемном
+исполнении, наиболее простой из них
+К174ПС1 - аналоговый перемножитель
+Джильберта.</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt159.gif" width="244" height="305"></p>
+
+<p align="center"><font color="#0000ff"><b>7.Пример применения каскада с эмиттерными связями в электронном регуляторе усиления.</b></font></p>
+<p align="left">Введение обратной связи с помощью резисторов R6,R7
+позволяет существенно снизить искажения сигнала. Отношение резисторов
+выбирают в пределах: R7/R6=2...10.</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt160.gif" width="325" height="316"></p>
+
+<p align="center"><font color="#0000ff"><b>8.Электронный регулятор по японскому патенту.</b></font></p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt161.gif" width="290" height="310"></p>
+
+<p align="center"><font color="#0000ff"><b>9.Регулятор с расширенной линейной областью на 15дБ за счёт линеаризирующих диодов</b></font><br> (при входном напряжении 50 мВ имеет коэффицинт гармоник на выходе 0.1%)</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt162.gif" width="324" height="327"></p>
+
+<p align="center"><font color="#0000ff"><b>10.Высоколинейный детектор огибающей.</b></font></p>
+<p align="left">Входное
+напряжение не должно быть более 100мВ.
+При этом с коллекторов снимается
+верхняя, а с эмиттеров - нижняя
+огибающая АМ - сигнала.</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt163.gif" width="147" height="296"></p>
+
+<p align="center"><font color="#0000ff"><b>11.Пример применения в усилителе - ограничителе ЧМ - сигнала.</b></font></p>
+<p align="left">Контур выделяет первую гармонику. Ток транзистора VT2
+имеет форму, близкую к прямоугольной. В микросхемном исполнении
+(например, К174ХА6, К174УР3 и др.) контур заменяют обычным резистором.</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt164.gif" width="195" height="196"></p>
+<p align="center">Введение каскодной развязки с нагрузкой уменьшает амплитудно - фазовую конверсию:</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt165.gif" width="171" height="266"></p>
+
+<p align="center"><font color="#0000ff"><b>12.Ограничитель другого типа.</b></font></p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt166.gif" width="226" height="198"></p>
+
+<p align="center"><font color="#0000ff"><b>13.Дифференциальный (балансный) каскад.</b></font></p>
+<p align="left">Позволяет
+решать задачу усиления сигналов с
+частотой от нуля (постояноого тока)
+до сотен МГц и при этом:<br>
+- даёт малую ошибку разбаланса
+входов за счёт взаимной
+компенсации Uбэ;<br>
+- стабилен по температуре и по
+времени благодаря согласованным
+изменениям параметров
+транзисторов;<br>
+- обладает способностью усиливать
+только дифференциальные сигналы и
+"не реагировать" на синфазные
+напряжения;<br>
+- имеет высокую линейность и
+скорость нарастания, особенно
+каскады на полевых транзисторах (ПТ);<br>
+- обладает высокой устойчивостью за
+счёт того, что входной и выходной
+токи попадают в шины общего провода
+(земли) и питания, замыкаясь через
+генератор и нагрузку, что особенно
+важно в УВЧ.</p>
+<p align="left">Для наглядности
+ниже показана схема
+четырёхплечного моста как элемента,
+не обладающего дрейфом. Если мост
+сбалансирован, т.е. R1/R2=R3/R4, то при
+изменении напряжения питания
+баланс не нарушается и ток нагрузки
+равен нулю.</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt167.gif" width="109" height="190"></p>
+<p align="center">В дифкаскаде  роль резисторов играют транзисторы:</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt168.gif" width="163" height="260"></p>
+<p align="left">Входное
+сопротивление ДК на БТ равно:<br>
+Rвх=4h21э fт/Iэсм, где Iэсм - общий (суммарный)
+эмиттерный ток смещения.<br>
+Коэффициент усиления по напряжению
+Кu=RкIэсм/2fт при Rк1=Rк2.<br>
+Искажения ДК на биполярных
+транзисторах при малых сигналах:<br>
+Кг=Um^4/4ft^4,<br>
+в то время как каскад с ОЭ имеет Кг=Um^2
+ft^2/(ft+IэRэ)^4, а при Rэ=0 Кrmax=Um^2/ft^2<br>
+где Um - амплитуда входного сигнала.</p>
+<p align="left">Нетрудно
+подсчитать, что дифкаскад имеет
+искажения в 100 раз меньшие, чем
+каскад с ОЭ с Rэ=0 и Um=5мВ. В то же
+время, искажения каскада на
+транзисторах разной проводимости
+довольно значительны. Поэтому для
+их уменьшения целесообразно
+включить между эмиттерами
+транзисторов резистор 100 Ом и более.<br>
+Перегрузочная способность ДК на ПТ
+примерно в 100 раз выше, т.к. Uотс/ft=100.
+Так, например, при Uотс=2.6В, Uвхmax=1.5В
+при Кг=1% на выходе, в то время как
+для биполярных транзисторов при
+том же коэффициенте гармоник Uвхmax=17мВ.
+К недостаткам ДК на ПТ можно
+отнести меньший (примерно в 4 раза)
+коэффициент усиления и большее
+напряжение смещения, которое
+сводится к минимуму использованием
+интегральных сборок, а так же
+тщательной подборкой транзисторов
+по параметрам и установкой их на
+общем радиаторе. Кроме того, при
+замене резистора в эмиттерной цепи
+ДК на ГСТ образуется очень глубокая
+отрицательная ОС по синфазному
+сигналу и сильное ослабления
+дрейфа. Другой недостаток ДК (в том
+числе и на БТ) заключается в том, что
+эквивалентная шумовая ЭДС
+симметричного ДК в 2^0.5 раз (на 3 дБ),
+несимметричного ДК с пассивным
+генератором тока - в 2 раза (на 6 дБ), а
+несимметричного ДК с активным
+генератором тока - на 7-8 дБ
+привышает при прочих равных
+условиях эквивалентную шумовую ЭДС
+каскада с ОЭ на одном транзисторе.
+Это вытекает из того, что истосник
+сигнала подключён к обоим входам ДК
+последовательно:</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt168.gif" width="163" height="260"></p>
+<p align="left">Следовательно и
+источники шума транзисторов
+подключаются к источнику сигнала
+также последовательно. Таким
+образом, эквивалентная плотность
+напряжения входного шума равна:<br>
+Eш=(еhi1+еhi2)^0.5=1.4emi (при еm1=em2).<br>
+Как выход из положения применяют
+параллельное включение
+транзисторов, что позволяетв n раз
+уменьшить шумы, где n - количество
+параллельно включённых
+транзисторов. Уменьшению шумов
+также способствует встречная
+динамическая нагрузка ДК с помощью
+отражателя тока, что эквивалентно
+симметричной нагрузке.</p>
+
+<p align="center"><font color="#0000ff"><b>14.Увеличние нагрузочной
+способности и повышение линейности ДК и его симметрии с помощью
+введения резисторов Rэ (от 100 Ом до 1...2 кОм):</b></font></p>
+<p align="left">Верхнее значение Rэ определяется требуемым
+усилением напряжения Ku=Rк/Rэ,
+дрейфом нулевого потенциала и
+шумом сопротивления Rэ, т.к. оно
+включается последовательно с
+источником сигнала. Иногда с
+помощью конденсатора, включённого
+между эмиттерами, вводят коррекцию
+по опережению.</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt169.gif" width="159" height="250"></p>
+
+<p align="center"><font color="#0000ff"><b>15.Схема дифкаскада, свободного от эффекта Миллера.</b></font></p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt170.gif" width="136" height="180"></p>
+<p align="center">Введение следящей обратной связи в коллектор входного транзистора позволяет нейтрализовать входную ёмкость ДК (СК):</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt171.gif" width="130" height="177"></p>
+<p align="left">подстроечный резистор устанавливается в такое
+положение, при котором на верхней рабочей частоте напряжение на
+коллекторе транзистора равно входному.</p>
+
+<p align="center"><font color="#0000ff"><b>16.Симметричный съём сигнала с помощью токового зеркала.</b></font></p>
+<p align="left">Позволяет уменьшить шумы и увеличить коэффициент
+усиления по сравнению с простым несимметричным ДК. Резистор RC - цепи
+по запаздыванию выбирают в пределах 68...680 Ом, конденсатор - в
+пределах 180...2200 пФ.</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt172.gif" width="210" height="240"></p>
+
+<p align="center"><font color="#0000ff"><b>17.Компенсация ООС через ёмкости Ск транзисторов ДК с помощью дополнительных транзисторов.</b></font></p>
+<p align="left">Позволяет расширить полосу пропускания.
+Дополнительные транзисторы могут быть заменены конденсаторами небольшой ёмкости.</p>
+
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt173.gif" width="252" height="253"></p>
+
+<p align="center"><font color="#0000ff"><b>18.Применение каскодного усилителя повышает быстродействие более чем в 10 раз:</b></font></p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt174.gif" width="184" height="285"></p>
+
+<p align="center"><font color="#0000ff"><b>19.Прецезионный ДК со следящей связью.</b></font></p>
+<p align="left">Применение каскода со следящей связью позволяет не только подавлять эффект Миллера, но и нейтрализовать ёмкости Ск.</p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt175.gif" width="326" height="248"></p>
+
+<p align="center"><font color="#0000ff"><b>20.Применение полевых транзисторов в каскоде со следящей связью.</b></font></p>
+<p align="center"><img src="az7_emitter_connection_and_differential_files/vt176.gif" width="224" height="296"></p>
+<p align="left">У дифференциальных усилителей, работающих в режиме большого сигнала, время нарастания и спада
+переходных процессов различно из-за более медленного разряда ёмкости нагрузки в момент отключения. Этот
+недостаток исключается в двухтактной схеме.</p>
+
+<br>
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td align="center"><a href="http://zpostbox.narod.ru/az5.htm"><b>PREV</b></a></td>
+<td align="center"><a href="http://zpostbox.narod.ru/az0.htm"><b>CONTENTS</b></a></td>
+<td align="center"><a href="http://zpostbox.narod.ru/az7.htm"><b>NEXT</b></a></td>
+</tr>
+</tbody></table>
+</center>
+
+</font>
+<!-- ><!-- "><!-- '><!-- -->
+
+
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<div style="background: transparent url(http://www.tns-counter.ru/V13a****yandex_ru/ru/CP1251/tmsec=narod_total/) repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"></div>
+<script language="JavaScript" src="az7_emitter_connection_and_differential_files/163.htm"></script><div style="position: absolute; left: 0pt; visibility: hidden;" id="ch"><spacer type="block" width="1" height="1"></div><div style="position: absolute; left: 1317px; top: 0pt; visibility: hidden; z-index: 999;" id="bn"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az7_emitter_connection_and_differential_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az7_emitter_connection_and_differential_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az7_emitter_connection_and_differential_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbu1F262918(); return false;"><img src="az7_emitter_connection_and_differential_files/bu.gif" title="Спрятать" alt="Спрятать" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az7_emitter_connection_and_differential_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az7_emitter_connection_and_differential_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az7_emitter_connection_and_differential_files/bb.gif" width="3"><img src="az7_emitter_connection_and_differential_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/7oOf6Dzehei40000ZhKKU9W4QnI8Y0sIgOKz1egi_w83aRpGIMG6auKDYwyKEHL2V0G0" target="_blank" title="Яндекс.Видео"><img src="az7_emitter_connection_and_differential_files/7oOf68yDwc440000ZhKKU9W4QnI8Y0sIgOKz1egi_w83aRpGIMG6auKDYw0L.png" alt="Яндекс.Видео" border="0" width="100" height="100"></a></td><td background="az7_emitter_connection_and_differential_files/bb.gif" width="3"><img src="az7_emitter_connection_and_differential_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az7_emitter_connection_and_differential_files/bb.gif" width="3"><img src="az7_emitter_connection_and_differential_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az7_emitter_connection_and_differential_files/bb.gif" width="3"><img src="az7_emitter_connection_and_differential_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+<div style="position: absolute; left: 1317px; top: 0pt; visibility: visible; z-index: 999;" id="bt"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az7_emitter_connection_and_differential_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az7_emitter_connection_and_differential_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az7_emitter_connection_and_differential_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbd1F262918(); return false;"><img src="az7_emitter_connection_and_differential_files/bd.gif" title="Показать" alt="Показать" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="clb1F262918();return false;"><img src="az7_emitter_connection_and_differential_files/bc.gif" title="Закрыть" alt="Закрыть" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az7_emitter_connection_and_differential_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az7_emitter_connection_and_differential_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az7_emitter_connection_and_differential_files/bb.gif" width="3"><img src="az7_emitter_connection_and_differential_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/7oOf6Dzehei40000ZhKKU9W4QnI8Y0sIgOKz1egi_w83aRpGIMG6auKDYwyKEHL2V0G0" target="_blank"><font color="#000000" size="-2">Яндекс.Видео</font></a></td><td background="az7_emitter_connection_and_differential_files/bb.gif" width="3"><img src="az7_emitter_connection_and_differential_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az7_emitter_connection_and_differential_files/bb.gif" width="3"><img src="az7_emitter_connection_and_differential_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az7_emitter_connection_and_differential_files/bb.gif" width="3"><img src="az7_emitter_connection_and_differential_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+
+<!-- mailto:spm111@yandex.ru -->
+</body></html>

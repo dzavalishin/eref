@@ -1,0 +1,366 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1251"><title>Voltage Comparators</title><style>body {margin:1in}</style>
+<script charset="utf-8" id="injection_graph_func" src="Comparators_files/injection_graph_func.js"></script></head><body bgcolor="#000000" link="#ffff00" text="#ccffff" vlink="#ffff00"> 
+
+
+<center><h1>Voltage Comparator Information And Circuits</h1></center>
+
+<p>&nbsp; This page provides basic information about voltage comparator
+integrated circuits and is to act as reference material for other
+circuits. The circuits shown are based on the LM339 Quad Voltage
+Comparator chip or the LM393 Dual Voltage Comparator chip. These
+devices are functionally identical. The LM311 Voltage Comparator can be
+used for these applications as well and also has a number of unique
+features.</p>
+
+<center><a href="http://www.national.com/ds/LM/LM339.pdf"><h4>LM339 Data sheet - National Semiconductor (.pdf)</h4></a></center>
+
+<p></p>
+<center><a href="http://www.national.com/ds/LM/LM393.pdf"><h4>LM393 Data sheet - National Semiconductor (.pdf)</h4></a></center>
+
+<p></p>
+<center><a href="http://www.national.com/ds/LM/LM311.pdf"><h4>LM311 Data sheet - National Semiconductor (.pdf)</h4></a></center>
+
+<hr><hr><center><h3>Internal Circuitry For 1/4 Of An LM339</h3><img src="Comparators_files/ComparatorGuts.GIF"></center>
+
+<center><h3>Pin Diagram For An LM339</h3><img src="Comparators_files/LM339pins.GIF"></center>
+
+<p>&nbsp; Print the diagram in the centre of a sheet of paper and then draw a circuit using the ICs pin locations.</p>
+
+<center><h3>Pin Diagram For An LM393</h3><img src="Comparators_files/LM393pins.GIF"></center>
+
+<p>&nbsp; Print the diagram in the centre of a sheet of paper and then draw a circuit using the ICs pin locations.</p>
+
+<hr><center><h2>Comparator Equivalent</h2></center>
+
+<center><img src="Comparators_files/ComparatorEquivalent.GIF"><h3>Single Supply Comparator Equivalent schematic</h3></center>
+
+<p>&nbsp; An integrated circuit "Voltage Comparator" is equivalent to
+an Operational Amplifier, Such as the LM358 or LM324, with two NPN
+transistors added to the output of each amplifier. (Refer to the above
+schematic.) This arrangement produces an "Open Collector" output for
+each of the four comparators in an LM339 chip. Each output can sink 15
+Milliamps and can withstand voltages of up to 50 Volts.
+</p><p>&nbsp; The output is switched ON or OFF depending on the
+relative voltages at the PLUS and MINUS inputs of the comparator, see
+the rules below. The inputs are quite sensitive and a difference of
+only a few millivolts between the two will cause the output to turn on
+or off.</p>
+
+<p>&nbsp; The LM339, LM393 and LM311 comparator chips can operate from a single or dual power supply of up to 32 volts maximum.</p>
+
+<p>&nbsp; When operated from Dual or Split power supplies the basic
+operation of comparator chips is unchanged except that for most devices
+the emitter of the output transistor is connected to the negative
+supply rail and not the circuit common. An exception to this is the
+LM311 which has a separate emitter terminal that can be connected to
+either.</p>
+
+<center><img src="Comparators_files/ComparatorEquivalentDualPS.GIF"><h3>Dual Supply Comparator Equivalent schematic</h3></center>
+
+<p>&nbsp; When operated from Dual or Split power supplies the input
+voltages can be above or below the common or zero voltage of the
+supply. If needed, one of the inputs can be connected to the common so
+that a 'Zero Crossing' detector is created.</p>
+
+<!-- =========   BASIC COMPARATOR OPERATION   ========= -->
+
+<hr><center><h2>Comparator Operation</h2>
+</center>
+
+<p>&nbsp; The following drawing show the two simplest configurations
+for voltage comparators. The diagrams below the circuits give the
+output results in a graphical form.</p>
+For these circuits the REFERENCE voltage is fixed at one-half of the
+supply voltage while the INPUT voltage is variable from zero to the
+supply voltage.<p></p>
+
+<p>&nbsp; In theory the REFERENCE and INPUT voltages can be anywhere
+between zero and the supply voltage but there are practical limitations
+on the actual range depending on the particular device used.</p>
+
+<center><img src="Comparators_files/ComparatorOperation.GIF"><h4>Basic Comparator Operation</h4></center>
+
+<center><h2>Input Vs. Output Results</h2></center>
+
+<ol><li>&nbsp; Current WILL flow through the open collector when the
+voltage at the PLUS input is lower than the voltage at the MINUS input.
+<p></p></li><li>&nbsp; Current WILL NOT flow through the open
+collector when the voltage at the PLUS input is higher than the voltage
+at the MINUS input.
+</li></ol>
+
+<center><img src="Comparators_files/ComparatorRules.GIF"><h4>Input Vs. Output Results</h4></center>
+
+<!--============= Input Offset Voltage =============-->
+
+<hr><center><h2>Input Offset Voltage</h2>
+</center>
+
+<p>&nbsp; Voltage comparators are not perfect devices and their
+performance may suffer from the effects of a parameter known as the
+Input Offset Voltage. The Input Offset Voltage for many comparators is
+only a few millivolts and in most circuits can be ignored.</p>
+
+<p>&nbsp; Problems related to the Input voltage normally occur when the Input voltage changes very slowly.</p>
+
+<p>&nbsp; The net result of the Input Offset Voltage is that the output
+transistor does not fully turn on or off when the input voltage is
+close to the reference voltage.</p>
+
+<p>&nbsp; The following diagram attempts to illustrate the effect of
+the input offset voltage with a slowly changing input voltage. This
+effect increases as the output transistor current increases so keeping
+the value of RL high will help reduce the problem.</p>
+
+<center><img src="Comparators_files/ComparatorOffset.GIF"><h4>Effect Of Input Offset Voltage</h4></center>
+
+<p>&nbsp; The effects of the input offset voltage can be countered by
+adding hysteresis to the circuit. This causes the reference voltage to
+change when the comparators output goes high or low.</p>
+
+<!--=========  hysteresis  ===========-->
+
+<hr><center><h2>Input Offset Voltage And Hysteresis</h2>
+</center>
+
+<p>&nbsp; For most comparator circuits <i>Hysteresis</i> is the
+difference between the input signal voltages at which a comparator's
+output is either fully ON or fully OFF. Hysteresis in comparators is
+generally undesirable but it can also be added to a circuit to reduce
+the sensitivity to noise or a slowly moving input signal.</p>
+
+<p>&nbsp; Typical hysteresis causes the output of the comparator to go from OFF to ON and vice-versa relatively slowly.</p>
+
+<p>&nbsp; The effect of added hysteresis is that as the input voltage
+slowly changes, the reference voltage will quickly change in the
+opposite direction. This gives the comparator's output a "snap" action.</p>
+
+<p>&nbsp; A mechanical analog of added hysteresis can be found in many
+toggle switches: As the handle moves past its center point, a spring in
+the switch forces the contacts of the switch to open or close, ensuring
+that the switch's contacts snap to the ON or OFF position.</p>
+
+<center><img src="Comparators_files/ComparatorHyster2.GIF"><h4></h4></center>
+
+<p>&nbsp; The width of the loop outlined by an off-on-off cycle is the input hysteresis voltage. </p>
+
+<p>&nbsp; The hysteresis voltage for most comparators is only a few
+millivolts and usually only affects circuits where the input voltage
+rises or falls very slowly or has voltage spikes known as "noise".</p>
+
+<hr><center><h2>Adding Hysteresis To A Comparator Circuit</h2>
+</center>
+
+<p>&nbsp; A comparator's Hysteresis range can be increased by adding a
+resistor between the comparator's output and the PLUS input terminal.
+This creates a feedback loop so that when the output makes a transition
+the feedback changes the voltage at the positive which increases the
+voltage difference between the PLUS and MINUS inputs.</p>
+
+<p>&nbsp; The feedback can only be made to the PLUS input terminal.</p>
+
+<center><img src="Comparators_files/ComparatorHyster.GIF"><h4>Increasing The Input hysteresis Range</h4></center>
+
+<p>&nbsp; If the comparator's output is initially 'OFF', the MINUS
+input voltage has to become above the PLUS input voltage by the
+hysteresis voltage range before the comparator output turns 'ON'.</p>
+
+<p>&nbsp; If the comparator is 'ON', the MINUS input voltage needs to
+drop slightly below the PLUS input voltage by the hysteresis voltage
+range before it turns 'OFF'.</p>
+
+<p>&nbsp; The hysteresis voltage range can also be made quite large in
+order to force the comparator's output to change as quickly as
+possible. The FLIP-FLOP circuits shown later on this page make use of
+an exaggerated hysteresis to create the memory effect with large input
+voltage changes needed to trigger a change in the output.</p>
+
+<!--=========  Window  ===========-->
+
+<hr><center><h2>Voltage Window Detector Circuit</h2>
+</center>
+
+<p>&nbsp; Comparators with Open Collector outputs such as the LM339 or
+LM393 must be configured so the both outputs are HIGH when the voltage
+is within the desired limits. The LM311 comparator can have other
+output arrangements as it has both an open collector and open emitter
+on the output transistor.</p>
+
+<center><img src="Comparators_files/ComparatorWindow.GIF"><h4>Window Comparator</h4></center>
+
+<!--=========  Oscillator  ===========-->
+
+<hr><center><h2>Comparator Oscillator Circuit</h2>
+</center>
+
+<p>&nbsp; Comparators can also be used as oscillators but are not well suited for this type of application.</p>
+
+<center><img src="Comparators_files/ComparatorOscillator.GIF"><h4>Oscillator Made From A Comparator</h4></center>
+
+
+<!--=========  OPAMP SUBSTITUTE  ===========-->
+
+<hr><center><h2>Using An OPAMP As A Comparator</h2>
+</center>
+
+<p>&nbsp; If there are Operational Amplifiers left over in a circuit
+and a Comparator is needed one can be created by adding a diode or
+transistor to the amplifiers output depending on the current capacity
+required.</p>
+
+<center><img src="Comparators_files/ComparatorOPAMP.GIF"><h4>Comparator Made From An Operational Amplifier</h4></center>
+
+<!--=========  COMPARATOR CIRCUITS  ===========-->
+
+<hr>
+<center><h2>Basic Comparator Circuits</h2>
+</center>
+
+<p>&nbsp; The following diagrams are of some basic comparator circuits.
+Most have a Cadmium Sulfide photocell input but could just as easily
+use a phototransistor or a voltage signal from another circuit as an
+input. The resistance values are not critical but should be used as a
+guide. In most comparator circuits the ratio of the resistances is more
+important than their actual values.</p>
+
+<hr><center><h2>Photocell Circuits</h2>
+</center>
+
+<center><img src="Comparators_files/ComparatorCdS.GIF"><h4>Photocell Circuits Schematic</h4>
+</center>
+
+<hr><p>&nbsp; If higher current loads are to be driven a PNP transistor
+can be added to the comparators output this will allow loads of up to
+300Ma. to be controlled.</p>
+
+<center><img src="Comparators_files/ComparatorSolenoid.GIF"><h4>Relay Driver Output Schematic</h4></center>
+
+<!-- +++++++++++  Time Delay Circuits ++++++++++ -->
+
+<hr><center><h2>Time Delay Circuits</h2>
+</center>
+
+<p>&nbsp; Short timing functions such as a pulsed outputs or time delays can also be created with one or two comparator sections.</p>
+
+<center><h4>Comparator Time Delay Schematic 1</h4><img src="Comparators_files/ComparatorTimeDelay.GIF"></center>
+
+<p>&nbsp; Notice that the second comparator section in the time delay
+circuit shares the same reference voltage input as the first. In most
+cases any number of comparators can have the same voltage source at one
+input, this can make circuits much less complicated.</p>
+
+<p>&nbsp; More Delay circuits.</p>
+
+<center><h4>Comparator Timer Delay Schematic 2</h4><img src="Comparators_files/ComparatorTimeDelay2.GIF"></center>
+
+<center><h4>Comparator Timer Delay Schematic 3</h4><img src="Comparators_files/ComparatorTimeDelay3.GIF"></center>
+
+<hr><center><h2>Basic Memory Functions</h2>
+</center>
+
+<p>&nbsp; Comparators can be made to perform a basic memory function by
+wiring them as a 'SET / RESET' type of FLIP/FLOP. This type of circuit
+can be used in unplugable walk around throttles to remember the
+direction of the train when the controller is disconnected. In the next
+diagram the comparator will remember which switch was pushed last. If
+the 'SET' button is pushed the LED will be on, the 'RESET' button will
+turn the LED off. A higher current version is also shown.</p>
+
+<center><img src="Comparators_files/ComparatorFLIPFLOP.GIF"><h4>Comparator FLIP/FLOP
+Schematic</h4></center>
+
+<p>&nbsp; How the Flip Flop works. A very basic description.</p>
+
+<ol><li><p>&nbsp; When the output of the comparator is off the voltage
+at the PLUS input will be the same as the supply voltage. With the PLUS
+input voltage higher than the MINUS input voltage the output will
+remain off.</p>
+</li><li><p>&nbsp; When the SET button is pushed the voltage at the PLUS input will go to zero and the output will turn on.</p>
+</li><li><p>&nbsp; When the SET button is release the voltage at the
+PLUS input will rise to 1/2 of the supply voltage and the output will
+remain turned on because the voltage at the PLUS input is remains below
+the voltage at the MINUS input.</p>
+</li><li><p>&nbsp; When the RESET button is pressed voltage at the
+MINUS input will go to zero from its normal level of 3/4 of the supply
+voltage. The output will turn off because the voltage at the MINUS
+input is below the voltage at the PLUS input. When the output turns off
+the voltage at the PLUS input will rise to the supply voltage level.</p>
+</li><li><p>&nbsp; When the RESET button is released the voltage at the
+MINUS input will rise to 3/4 of the supply voltage. The PLUS input
+voltage will stay above the voltage at the MINUS input and the output
+will stay turned off.</p>
+</li></ol>
+ 
+<hr>
+<center><h2>Open Collector Output Transistors</h2>
+</center>
+
+<p>&nbsp; Because the output transistor of the comparator has an open
+collector the supply and load voltages do not have to be the same. This
+means that the comparator could use a 12 Volt power supply while the
+load could be a 24 Volt relay or 5 Volt LED circuit.</p>
+
+<p>&nbsp; The following three diagrams are some examples of Dual
+voltage circuits. In the first two the voltage at the output of the
+comparators could even be full wave direct current.</p>
+
+<center><img src="Comparators_files/ComparatorDV.GIF"><h4>Dual Voltage Output Schematic</h4></center>
+<p></p>
+<center><img src="Comparators_files/ComparatorSolenoidDV.GIF"><h4>Dual Voltage Relay Driver Output Schematic</h4></center>
+
+<p></p>
+<center><img src="Comparators_files/ComparatorFLIPFLOPDV.GIF"><h4>Dual Voltage FLIP/FLOP
+Schematic</h4></center>
+
+<hr><center><h2>4 Level - voltage Detector</h2>
+</center>
+
+<p>&nbsp; This circuit can sequentially indicate 4 separate voltage
+levels. The voltages are determined by the values of resistors R1
+through R5 arranged in a simple voltage divider circuit.</p>
+
+<center><img src="Comparators_files/Comparator4Level.GIF"><h4>4 Level Detector Schematic </h4></center>
+
+
+<!--============= Other Circuits =============-->
+
+<hr><center><h2>Some Other Circuits</h2>
+</center>
+
+<a href="http://home.cogeco.ca/%7Erpaisley4/HBridge.html"><h3>LM311 Comparator Used To Control An 'H-Bridge Circuit</h3></a>
+<p></p>
+<center><img src="Comparators_files/ComparatorExtra1.GIF"><h4>Light Activated Relay With 5 Second Release Delay</h4></center>
+
+<!-- CAVEAT  SECTION     CAVEAT  SECTION  -->
+
+<hr><a href="http://home.cogeco.ca/%7Erpaisley4/CircuitIndex.html"><h4>Return to the Main Page</h4>
+</a>
+
+<hr><center><h2>Please Read Before Using These Circuit Ideas</h2></center>
+
+<strong><p>&nbsp; The explanations for the circuits on these pages
+cannot hope to cover every situation on every layout. For this reason
+be prepared to do some experimenting to get the results you want. This
+is especially true of circuits such as the "Across Track Infrared
+Detection" circuits and any other circuit that relies on other than
+direct electronic inputs, such as switches.</p></strong>
+<p><strong>&nbsp; If you use any of these circuit ideas, ask your parts
+supplier for a copy of the manufacturers data sheets for any components
+that you have not used before. These sheets contain a wealth of data
+and circuit design information that no electronic or print article
+could approach and will save time and perhaps damage to the components
+themselves. These data sheets can often be found on the web site of the
+device manufacturers.</strong></p>
+<p><strong>&nbsp; Although the circuits are functional the pages are
+not meant to be full descriptions of each circuit but rather as guides
+for adapting them for use by others. If you have any questions or
+comments please send them to the email address on the Circuit Index
+page.</strong></p>
+
+<a href="http://home.cogeco.ca/%7Erpaisley4/CircuitIndex.html"><h4>Return to the Main Page</h4>
+</a>
+
+<p>22 December, 2008</p>
+
+</body></html>

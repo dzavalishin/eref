@@ -1,0 +1,2 @@
+КР1014КТ1 (Philips-BSN254A/RA)
+транз: N-MOSFET 250V, 300mA, <5 Om 1W

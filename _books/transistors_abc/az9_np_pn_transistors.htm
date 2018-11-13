@@ -1,0 +1,499 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>9. Однопереходный транзистор.</title>
+</head><body alink="#ff0000" bgcolor="#ffffff" text="#0000ff" vlink="#000080" link="#0000ff">
+<font color="#000000" face="Arial">
+<center>
+
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td align="center"><p align="center"><font color="#0000ff" size="6"><b>9. Однопереходный транзистор.</b></font></p>
+</td>
+</tr>
+</tbody></table>
+
+
+<p align="left">Помимо
+биполярных и полевых транзисторов
+существует так называемый
+однопереходный транзистор (ОПТ),
+представляющий собой кристалл
+полупроводника, в котором создан p-n
+переход, называемый инжектором:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt187.gif" width="150" height="180"></p>
+
+<p align="left">Этим переходом
+кристалл полупроводника
+разделяется как бы на две области
+базы. Поэтому однопереходный
+транзистор имеет и другое широко
+распространённое название -
+двухбазовый диод. Принцип действия
+транзистора основан на изменении
+объёмного сопротивления
+полупроводника базы при инжекции. В
+отличии от биполярных и полевых
+транзисторов ОПТ представляет
+собой прибор с отрицательным
+сопротивлением. Это означает, что в
+определённых условиях входное
+напряжение или сигнал могут
+уменьшаться даже при возрастании
+выходного тока через нагрузку.
+Когда ОПТ находится во включённом
+состоянии, выключить его можно
+только разомкнув цепь, либо сняв
+входное напряжение.<br>
+Участок между базами образован
+кремниевой пластиной n-типа и имеет
+линейную вольтамперную
+характеристику, т.е. ток через этот
+участок прямо пропорционален
+приложенному межбазовому
+напряжению. При отсутствии
+напряжения на эмиттере (относительно
+Б1) за счёт проходящего I2 в базе 1
+внутри кристалла создаётся падение
+напряжения Uвн, запирающее p-n
+переход, При подаче на вход
+небольшого напряжения Uвх=&lt;Uвн
+величина тока, проходящего через
+переход,почти не изменяется. При Uвх&gt;Uвн
+переход смещается в прямом
+направлении и начинается инжекция
+носителей заряда (дырок) в базы,
+приводящая к снижению их
+сопротивления. При этом
+уменьшается падение напряжения Uвн,
+что приводит к лавинообразному
+отпиранию перехода - участок II на
+воль-амперной характеристике:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt188.gif" width="270" height="250"></p>
+
+<p align="left">Участок III,
+справа от минимума, где эмиттерный
+ток ограничивается только
+сопротивлением насыщения,
+называется областью насыщения. При
+уменьшении эмиттерного напряжения
+до Uвх&lt;Uвн переход закрывается. При
+нулевом токе базы 2 (т.е. вывод Б2 не
+используется) характеристика (кривая
+2) представляет собой по существу
+характеристику обычного
+кремниевого диода.<br>
+Однопереходные транзисторы
+применяются в различных схемах
+генераторов релаксационных
+колебаний, мультивибраторах,
+счётчиках импульсов, триггерных
+схемах управления тиристорами,
+генераторах пилообразного
+напряжения, делителях, реле времени,
+схемах фазового управления и др. Однако из-за малой
+скорости переключения и
+сравнительно большой потребляемой
+входной мощности они широкого
+распространения не получили.</p>
+
+<p align="left">Хотя основная
+функция ОПТ такая же, как и у
+переключателя, основным
+функциональным узлом среди
+большинства схем на ОПТ является
+релаксационный генератор:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt189.gif" width="150" height="178"></p>
+
+<p align="left">В зависимости от
+назначения выходное напряжение
+можно снимать с любого вывода ОПТ.
+Осциллограммы напряжения показаны
+на этом рисунке:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt190.gif" width="150" height="178"></p>
+
+<p align="left">Для устойчивой
+генерации необходимо выполнение
+условия:<br>
+(Uп-Umin)/(Imin&lt;Re&lt;(Uп-Umax)/Imax<br>
+Период колебаний определяют
+ориентировочно по формуле:<br>
+Т=ReCe(1-K), где К=(Umax-Umin)/Uвн=Rн/Rc&gt;0.7 -
+коэффициент нейтрализации. Откуда
+Re=(0.1...0.2)Rн.<br>
+Иногда с целью повышения
+термостабильности напряжения Umax, в
+цепь базы 2 вводят резистор R1.
+Резистор R2 вводят при
+необходимости снятия сигнала с
+базы 1. Его номинал рассчитывают
+исходя из межбазового тока и
+заданной амплитуды снимаемого
+сигнала. Обычно номинал этого
+резистора не превышает 100 Ом и
+только в отдельных случаях
+достигает 3кОм. Для типового ОПТ (КТ117А,
+Б) сопротивление Rе лежит в пределах
+4...9кОм, а рабочее напряжение
+находится в пределах 10...30 В. С
+помощью резисторов R1, R2 в некоторых
+пределах можно регулировать порог
+срабатывания ОПТ.</p>
+
+<p align="left">Рассмотрим
+простейший генератор
+пилообразного напряжения:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt191.gif" width="158" height="172"></p>
+
+<p align="left">Как правило, для
+получения низкого сопротивления в
+качестве буферного каскада
+применяют эмиттерный повторитель.
+Предположим, что статический
+коэффициент передачи тока
+транзистора VT2 h21э=50, R2=1кОм. Тогда Rн=(h21э+1)R2
+=(50+1)*1=51кОм. Отсюда R1=(0.1...0.2)Rн=5.1...10кОм.
+Поскольку напряжение Uemin=2B, a Uэб=0.6B&lt;Uemin,
+"обрезания" сигнала не
+происходит.<br>
+При реализации эмиттерного
+провторителя на p-n-p транзисторе
+можно добиться некоторого
+улучшения рабочих характеристик, т.к.
+сопротивление нагрузки включается
+параллельно резистору R1,
+следовательно исключается
+опасность прекращения генерации из-за
+никого значения статистического
+коэффициента передачи тока
+транзистора или сопртивления в
+эмиттере. Более того, коллекторный
+ток утечки биполярного транзистора
+вычитается из эмиттерного тока
+утечки ОПТ, чем достигается
+частичная термостабилизация.</p>
+
+<p align="left">Простейший
+способ линеаризации пилообразного
+напряжения:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt192.gif" width="124" height="199"></p>
+
+<p align="left">Применение
+дополнительного источника
+повышенного напряжения позволяет
+существенно увеличить номинал
+токозадающего резистора, что
+эквивалентно заряду от генератора
+тока. Недостаток этого способа -
+необходимость применения
+дополнительного источника.</p>
+
+<p align="left">Линеаризация с
+помощью конденсаторной
+вольтдобавки "вольтдобавки" (следящей
+обратной связи):</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt193.gif" width="230" height="237"></p>
+
+<p align="left">Введение
+резистора R1 позволяет использовать
+базу2 для синхронизации выходного
+напряжения.</p>
+
+<p align="left">Возможный
+вариант стабилизации зарядного
+тока со следящей обратной связью с
+помощью стабилитрона:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt194.gif" width="230" height="237"></p>
+
+<p align="left">Введение
+дополнительного источника
+отрицательного напряжения
+постоянного тока также
+способствует линеаризации.</p>
+
+<p align="left">Другой способ
+линеаризации с помощью ГСТ:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt195.gif" width="105" height="218"></p>
+
+<p align="left">Применение
+интегратора позволяет получить
+напряжение пилы от вогнутой до
+выпуклой формы:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt196.gif" width="194" height="198"></p>
+
+<p align="left">Желаемой формы
+добиваются подбором резистора R3.</p>
+
+<p align="left">Возможный
+вариант мультивибратора:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt197.gif" width="168" height="136"></p>
+
+<p align="left">Для получения
+сигнала типа "меандер"
+необходимо выполнить условия: R2=2R1.
+Работает мультивибратор следующим
+образом. При зарядке конденсатора
+транзистор VT2 открыт током заряда.
+Время заряда определяет постоянная
+времени R1C1. При включении ОПТ
+базоэмиттерный переход VT2 за счёт
+напряжения на конденсаторе
+смещается в обратном направлении и
+транзистор VT2 закрывается.</p>
+
+<p align="left">Разновидность
+ОПТ - программируемый ОПТ (ПОПТ) -
+четырёхслойный прибор, структура
+которого аналогична структуре
+тиристора за исключением того, что
+используется анодное управление в
+отличие от катодного управления у
+тиристора. ОПТ и ПОПТ обладают
+аналогичными характеристиками,
+однако напряжение включения ПОПТ
+программируется и может задаваться
+с помощью внешнего делителя
+напряжения. В отличии от ОПТ, ПОПТ
+более быстродействующий и
+чувствительный прибор. Исходя из
+эквивалентной схемы</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt198.gif" width="64" height="136"></p>
+
+<p align="left">можно сделать
+вывод, что ПОПТ представляет собой
+выключаемый тиристор с анодным
+управлением. При подаче на
+управляющий электрод (эмиттер)
+более отрицательного относительно
+анода (база 2) напряжения ПОПТ
+переходит из режима отсечки во
+включённое состояние. Для
+обеспечения функционирования ПОПТ
+в режиме ОПТ требуется на
+управляющем электроде ПОПТ
+поддерживать внешнее опроное
+напряжение, которое по существу
+совпадает с точкой максимума.
+Поскольку опроное напряжение
+определяется параметрами внешнего
+делителя, его можно сделать
+переменным. Эта особенность и
+является главным отличием ОПТ от
+ПОПТ</p>
+
+<p align="left">Пожалуй,
+наибольшее применение
+однопереходные транзисторы нашли в
+различных регуляторах мощности.
+рассмотрим несколько практических
+схем применения.</p>
+
+<p align="left">Фазоимпульсный
+регулятор мощности паяльника (до 100Вт):</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt199.gif" width="287" height="247"></p>
+
+<p align="left">работает
+следующим образом. Положительная
+полуволна питающего напряжения
+проходит в нагрузку практически
+без ослабления через диод VD2.
+Релаксационный генератор питается
+пульсирующим напряжением (в
+течениие отрицательной полуволны),
+ограниченным стабилитроном VD1 на
+уровне 24В. С появлением каждой
+отрицательной полуволны
+конденсатор С1 начинает заряжаться
+через цепь R2, R4. Скорость зарядки
+можно регулировать переменным
+резистором R2. Как только напряжение
+на конденсаторе достигнет порога
+открывания транзистора VT1, на
+управляющий электрод тиристора VS1
+поступает положительный импульс и
+тиристор открывается до конца
+полупериода. Таким образом,
+изменением постоянной времени
+фазосдвигающей цепи R2C1
+осуществляктся регулировние
+мощности, отдаваемой в нагрузку.</p>
+
+<p align="left">Простой
+светорегулятор на эквиваленте ПОПТ:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt200.gif" width="400" height="208"></p>
+
+<p align="left">Постоянная
+времени цепи R4C1 выбрана равной
+примерно 10мс.</p>
+
+<p align="left">Применение реле
+времени на ОПТ в автомате -
+ограничителе включения света:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt201.gif" width="370" height="210"></p>
+
+<p align="left">Такой автомат
+может использоваться, например в
+общих коридорах с целью экономии
+электроэнергии. Необходимое время
+включённого состояния
+устанавливается подстроечным
+резистором R3. После заряда
+конденсатора до напряжения
+включения ОПТ, т.е. после его
+включения, конденсатор С1 на
+короткое время создаёт на аноде
+тиристора VS1 отрицательное
+напряжение и тем самым выключает
+его.</p>
+
+<p align="left">Простой автоматический регулятор освещённости:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt202.gif" width="489" height="208"></p>
+
+<p align="left">может найти применение на рабочих местах, где высоки требования к постоянству освещенности.</p>
+
+<p align="left">Все
+рассмотренные схемы, помимо
+создаваемых ими помех, имеют один
+существенный недостаток. Так как
+через диоды моста течёт ток
+нагрузки, их необходимо выбирать
+соответствующей мощности или
+устанавливать на радиаторы, что
+ухудшает массогабаритные
+показатели.<br>
+Применение подобных регуляторов
+для регулирования числа оборотов
+двигателя имеет некоторые
+особенности.<br>
+Во-первых, коллекторные двигатели
+требуют расширения управляющего
+импульса до конца полупериода во
+избежание нестабильности работы из-за
+выключения тиристора или симистора
+при искрении щёток, т.е. при разрыве
+цепи. Во-вторых, для стабилизации
+числа оборотов независимо от
+нагрузки необходимо введение
+обратной связи по току или по
+напряжению, т.к. с увеличением
+нагрузки на валу падают обороты
+двигателя, уменьшается комплексное
+сопротивление нагрузки и
+соответственно увеличивается
+непроизводительное потребление
+тока.</p>
+
+<p align="left">Пример стабилизированного регулятора реверсивного двигателя:</p>
+<p align="center"><img src="az9_np_pn_transistors_files/vt203.gif" width="540" height="237"></p>
+
+<p align="left">Подбором
+резистора R1 (обратная связь по
+напряжению) добиваются минимальной
+зависимости числа оборотов
+двигателя от изменения нагрузки.</p>
+
+<p align="left">Применение
+импульсного трансформатора
+позволяет разгрузить диодный мост
+и тем самым улучшить
+массогабаритные показатели
+регулятора. Стабилизированный
+регулятор числа оборотов двигателя:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt204.gif" width="527" height="268"></p>
+
+<p align="left">В данном
+регуляторе применена обратная
+связь по току с помощью резистора R7.
+В качестве импульсного
+трансформатора можно применить МИТ-4
+или выполнить его на
+магнитопроводе типоразмера К16х10х4.5
+из феррита М2000НМ. Обмотки содержат
+по 100 витков провода ПЭЛШО 0.12.
+Возможный вариант замены МИТ-4
+двумя оптопарами показан на этом
+рисунке:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt206.gif" width="230" height="237"></p>
+
+<p align="left">Регулятор мощности нагрузки до 1кВт:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt205.gif" width="323" height="237"></p>
+
+<p align="left">Импульсный
+трансформатор тот же, что и в
+предыдущей схеме. Замена симистора
+двумя тиристорами показана на
+рисунке:</p>
+
+<p align="center"><img src="az9_np_pn_transistors_files/vt207.gif" width="156" height="175"></p>
+
+<p align="left">Все три обмотки
+импульсного трансформатора Т1
+содержат по 100 витков. При этом
+мощность нагрузки можно увеличить
+до 2кВт.</p>
+
+<p align="left">В заключении
+необходимо отметить, что все
+рассмотренные регуляторы мощности
+имеют один существенный недостаток
+- создают большие импульсные
+радиопомехи как в сети, так и в
+окружающем пространстве, т.к.
+выключение симистора или тиристора
+происходит по окончании
+полупериода, а их включение, за счёт
+фазового регулирования, в пределах
+полупериода. Интенсивность
+радиопомех зависит от амплитуды
+мгновенного напряжения, при
+котором открывается тиристор,
+мощности нагрузки, длины
+соединительных проводников и ряда
+других причин. Отсюда следует, что
+максимальные помехи возникают на
+среднем участке регулировочной
+характеристики.</p>
+
+
+<br>
+<table bgcolor="#00ff00" border="0" width="100%">
+<tbody><tr>
+<td align="center"><a href="http://zpostbox.narod.ru/az7.htm"><b>PREV</b></a></td>
+<td align="center"><a href="http://zpostbox.narod.ru/az0.htm"><b>CONTENTS</b></a></td>
+<td align="center"><a href="http://zpostbox.narod.ru/az9.htm"><b>NEXT</b></a></td>
+</tr>
+</tbody></table>
+</center>
+</font>
+<!-- ><!-- "><!-- '><!-- -->
+
+
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<div style="background: transparent url(http://www.tns-counter.ru/V13a****yandex_ru/ru/CP1251/tmsec=narod_total/) repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"></div>
+<script language="JavaScript" src="az9_np_pn_transistors_files/163.htm"></script><div style="position: absolute; left: 0pt; visibility: hidden;" id="ch"><spacer type="block" width="1" height="1"></div><div style="position: absolute; left: 1317px; top: 0pt; visibility: hidden; z-index: 999;" id="bn"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az9_np_pn_transistors_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az9_np_pn_transistors_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az9_np_pn_transistors_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbu59AC49BA(); return false;"><img src="az9_np_pn_transistors_files/bu.gif" title="Спрятать" alt="Спрятать" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az9_np_pn_transistors_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az9_np_pn_transistors_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az9_np_pn_transistors_files/bb.gif" width="3"><img src="az9_np_pn_transistors_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/MQn9kX6Qnv440000ZhyNU9W4QnI8hs6V19AfjUS5YgskOGEHlD19P0QJXGsBhuLq4q9-1000" target="_blank" title="Рефераты"><img src="az9_np_pn_transistors_files/MQn9kg2HHzO40000ZhyNU9W4QnI8hs6V19AfjUS5YgskOGEHlD19P0QJXGsB.gif" alt="Рефераты" border="0" width="100" height="100"></a></td><td background="az9_np_pn_transistors_files/bb.gif" width="3"><img src="az9_np_pn_transistors_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az9_np_pn_transistors_files/bb.gif" width="3"><img src="az9_np_pn_transistors_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az9_np_pn_transistors_files/bb.gif" width="3"><img src="az9_np_pn_transistors_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+<div style="position: absolute; left: 1317px; top: 0pt; visibility: visible; z-index: 999;" id="bt"><table border="0" cellpadding="1" cellspacing="0" width="108"><tbody><tr><td bgcolor="#000000"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#ffffff"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td bgcolor="#ffffff" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td><td width="18"><a href="http://www.yandex.ru/" target="_blank"><img src="az9_np_pn_transistors_files/by.gif" title="Яндекс" alt="Яндекс" border="0" vspace="2" width="18" height="14" hspace="1"></a></td><td width="98%"><a href="http://www.yandex.ru/advertising/index.html" target="_blank"><img src="az9_np_pn_transistors_files/bt.gif" title="Реклама на Яндексе" alt="Реклама на Яндексе" align="middle" border="0" width="51" height="14"></a></td><td width="11"><a href="http://narod.yandex.ru/help/mini.yhtml" target="_blank"><img src="az9_np_pn_transistors_files/bh.gif" title="Помощь" alt="Помощь" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="rbd59AC49BA(); return false;"><img src="az9_np_pn_transistors_files/bd.gif" title="Показать" alt="Показать" border="0" width="11" height="10"></a></td><td width="11"><a href="#" onclick="clb59AC49BA();return false;"><img src="az9_np_pn_transistors_files/bc.gif" title="Закрыть" alt="Закрыть" border="0" width="11" height="10"></a></td><td bgcolor="#808080" width="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr bgcolor="#cccccc"><td width="3"><img src="az9_np_pn_transistors_files/bb.gif" width="3" height="1"></td><td bgcolor="#808080" width="100%"><spacer type="block" width="1" height="1"></td><td width="3"><img src="az9_np_pn_transistors_files/bb.gif" width="3" height="1"></td></tr><tr bgcolor="#cccccc"><td background="az9_np_pn_transistors_files/bb.gif" width="3"><img src="az9_np_pn_transistors_files/bb.gif" width="3" height="1"></td><td width="100%"><a href="http://yabs.yandex.ru/count/MQn9kX6Qnv440000ZhyNU9W4QnI8hs6V19AfjUS5YgskOGEHlD19P0QJXGsBhuLq4q9-1000" target="_blank"><font color="#000000" size="-2">Рефераты</font></a></td><td background="az9_np_pn_transistors_files/bb.gif" width="3"><img src="az9_np_pn_transistors_files/bb.gif" width="3" height="1"></td></tr><tr><td background="az9_np_pn_transistors_files/bb.gif" width="3"><img src="az9_np_pn_transistors_files/bb.gif" width="3" height="1"></td><td bgcolor="#ffffff" height="1"><spacer type="block" width="1" height="1"></td><td background="az9_np_pn_transistors_files/bb.gif" width="3"><img src="az9_np_pn_transistors_files/bb.gif" width="3" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#cccccc"><td height="1" nowrap="nowrap"><table align="left" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#ffffff" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="1"><tbody><tr><td bgcolor="#808080" height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr><tr bgcolor="#808080"><td height="1" nowrap="nowrap"><spacer type="block" width="1" height="1"></td></tr></tbody></table></td></tr></tbody></table></div>
+
+<!-- mailto:spm111@yandex.ru -->
+</body></html>
